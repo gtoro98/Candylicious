@@ -1,0 +1,45 @@
+.navbar{
+    height: 4em;
+
+    img{
+        height: auto;
+        width: auto;
+        vertical-align: top;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+}
+
+ul {
+    height: fit-content;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #F1BABF;;
+  }
+  
+  li {
+    float: left;
+  }
+  figure{
+      height: fit-content;
+  }
+  
+  li a {
+    height: fit-content;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #FFFFFF;
+   color: #F1BABF;
+  }
+  
+  
