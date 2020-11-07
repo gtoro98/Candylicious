@@ -1,45 +1,39 @@
-.navbar{
-    height: 4em;
-
-    img{
-        height: auto;
-        width: auto;
-        vertical-align: top;
-        margin-top: 0;
-        padding-top: 0;
-    }
-
+.navbar {
+  background-color: #F1BABF;;
+  overflow: hidden;
 }
 
-ul {
-    height: fit-content;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #F1BABF;;
-  }
-  
-  li {
-    float: left;
-  }
-  figure{
-      height: fit-content;
-  }
-  
-  li a {
-    height: fit-content;
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #FFFFFF;
+  color: #E57A7F;
+}
+
+/* Add an active class to highlight the current page */
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(.active) {display: none;}
+  .navbar a.icon {
+    float: right;
     display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
   }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #FFFFFF;
-   color: #F1BABF;
-  }
+}
   
   

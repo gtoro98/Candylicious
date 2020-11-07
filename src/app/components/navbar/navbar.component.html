@@ -1,30 +1,28 @@
-<ul class="navbar">
-    <li>
-        <figure>
-            <img src= "assets/img/logo-candylicious.png">
-        </figure>
-    </li> 
-    <li>
-        <a [routerLink] ="['/']" routerLinkActive = "link-active" >Inicio</a>
-    </li>
-    <li>
-        <a [routerLink] ="['/tienda']" routerLinkActive = "link-active">Tienda</a>
-    </li>
-    <li>
-        <a [routerLink] ="['/contacto']" routerLinkActive = "link-active">Contacto</a>
-    </li>
-    <li>
-        <a [routerLink] ="['/about-us']" routerLinkActive = "link-active">Nosotros</a>
-    </li>
-    <li class = "carrito" style="float: right;" >
-        <a  >
-            <img src= "assets/img/carrito.png" onmouseover="this.src='assets/img/carrito-rosa.png';" onmouseout="this.src='assets/img/carrito.png';" >
-        </a>
-    </li>
-    <li style="float: right;">
-        <a>
-            <img src= "assets/img/user.png" onmouseover="this.src='assets/img/user-rosa.png';" onmouseout="this.src='assets/img/user.png';">
-        </a>
-    </li>
+<div class="navbar" id = "myNavbar">  
     
-</ul>
+            <img style = "float: left;" src= "assets/img/logo-candylicious.png">
+    
+    
+    <a [routerLink] ="['/']" routerLinkActive = "link-active" >Inicio</a>
+    
+    <a [routerLink] ="['/tienda']" routerLinkActive = "link-active">Tienda</a>
+    
+    <a [routerLink] ="['/contacto']" routerLinkActive = "link-active">Contacto</a>
+    
+    
+    <a [routerLink] ="['/about-us']" routerLinkActive = "link-active">Nosotros</a>
+    
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <img src="assets/img/icono.png">
+    </a>
+    
+    <a  class = "active" style="float: right;">
+        <img src= "assets/img/carrito.png" onmouseover="this.src='assets/img/carrito-rosa.png';" onmouseout="this.src='assets/img/carrito.png';" >
+    </a>
+   
+    <a class = "active" style="float: right;">
+        <img src= "assets/img/user.png" onmouseover="this.src='assets/img/user-rosa.png';" onmouseout="this.src='assets/img/user.png';">
+    </a>
+
+    
+</div>
