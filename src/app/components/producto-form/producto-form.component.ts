@@ -15,7 +15,6 @@ export class ProductoFormComponent implements OnInit {
 
   productoForm: FormGroup = null;
   label = "Guardar";
-  ediarProducto: Producto = null;
   productoId: string = null;
 
   constructor(
@@ -83,8 +82,9 @@ export class ProductoFormComponent implements OnInit {
 
   }
 
-  onSubmit(e: MouseEvent) {
 
+  onSubmit(e: MouseEvent) {
+ 
     const newProducto: Producto = {
       nombre: this.productoForm.get('nombre').value,
       sabor: this.productoForm.get('sabor').value,
@@ -93,9 +93,19 @@ export class ProductoFormComponent implements OnInit {
       marca: this.productoForm.get('marca').value,
       descripcion: this.productoForm.get('descripcion').value
     }
+ 
+    if(this.editarProducto){
+      this.productoService.editarProducto(newProducto, this.productoId).then(res => {
+        this.router.navigate(['/tienda'])
+        console.log("Producto editado")
+      }).catch(err => console.log(err));
+    }
+    else{
+      this.createProducto(newProducto)
+      console.log("Producto creado")
+    }
 
-    this.createProducto(newProducto)
-    console.log("enviado" , newProducto);
+
 }
 
 }
