@@ -9,13 +9,19 @@
   display: block;
   color: #FFFFFF;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1em 2em;
   text-decoration: none;
   font-size: 17px;
+  height: 100%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+
 }
 
 /* Change the color of links on hover */
-.navbar a:hover {
+.navbar .link:hover {
   background-color: #FFFFFF;
   color: #E57A7F;
 }
@@ -47,6 +53,12 @@
     display: block;
     text-align: center;
   }
+}
+
+.imagen{
+  max-width:100%;
+  max-width: 3em;
+  vertical-align: middle;
 }
   
   

@@ -1,0 +1,67 @@
+
+<div class = "container">
+    <form [formGroup] = "productoForm" (ngSubmit) = "onSubmit">
+        <div id = "sub-title">
+            <label class = "sub-title" for="nombre">Nombre:</label>
+            <input 
+            type="text"
+            formControlName = "nombre"
+            placeholder="Introduzca el nombre"
+            id="nombre"
+            >
+            
+        </div>
+        <div>
+            <label class= "text" for="sabor">Sabor:</label>
+            <input 
+            type="text"
+            formControlName = "sabor"
+            placeholder="Introduzca el sabor"
+            id="sabor"
+            >
+            
+        </div>
+        <div>
+            <label class="text" for="categoria">Categoria:</label>
+            <input 
+            type="text"
+            formControlName = "categoria"
+            placeholder="Introduzca la categoria"
+            id="categoria"
+            >
+            
+        </div>
+        <div>
+            <label class="text" for="precio">Precio(50gr):</label>
+            <input 
+            type="number"
+            formControlName = "precio"
+            placeholder="Introduzca el precio"
+            id="precio"
+            >
+            
+        </div>
+        <div>
+            <label class="text" for="marca">Marca:</label>
+            <input 
+            type="text"
+            formControlName = "marca"
+            placeholder="Introduzca la marca"
+            id="marca"
+            >
+            
+        </div>
+        <div>
+            <label class="text" for="descripcion">Descripcion:</label>
+            <input 
+            type="text"
+            formControlName = "descripcion"
+            placeholder="Introduzca la descripcion"
+            id="descripcion"
+            >
+            
+        </div>
+        <app-button (click) = "onSubmit($event)" [label] = "label"></app-button>
+        
+    </form>
+</div>

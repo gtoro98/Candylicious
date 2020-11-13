@@ -1,0 +1,52 @@
+.container{
+    margin: auto;
+    width: 50%;
+}
+.form{
+    
+    padding: 2em;
+    position: relative;
+}
+
+input{
+
+    border: 3px solid #EFB0B6;
+    box-sizing: border-box;
+    padding: 1em 1em;
+    border-radius: 10px;
+    width: 171px;
+    height: 48px;
+}
+
+.text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2em;
+    line-height: 1em;
+
+color: rgba(217, 62, 70, 0.69);
+}
+
+.sub-title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3em;
+    line-height: 1em;
+
+color: rgba(217, 62, 70, 0.69);
+}
+#sub-title{
+    text-align: center;
+}
+#submit{
+    position: absolute;
+    right:    5px;
+    bottom:   5px;
+    background: rgba(218, 25, 25, 0.92);
+    width: 147px;
+    height: 55px;
+    text-align: center;
+    border-radius: 10px;
+}

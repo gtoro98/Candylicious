@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("hola")
+    
   }
   public display(){
     const navbar = document.getElementById('myNavBar');
