@@ -9,7 +9,7 @@ import { TiendaComponent } from './pages/tienda/tienda.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: InicioComponent,
   },
   {

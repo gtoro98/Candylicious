@@ -1,8 +1,8 @@
 <div class="navbar" id = "myNavBar">  
+
+    <img class = "imagen" [routerLink] ="['/home']" style="float: left;" src= "assets/img/logo-candylicious.png">
     
-            <img class = "imagen"style = "float: left;" src= "assets/img/logo-candylicious.png">
-    
-    <a class="link" [routerLink] ="['/']" routerLinkActive = "link-active" >Inicio</a>
+    <a class="link" [routerLink] ="['/home']" routerLinkActive = "link-active" >Inicio</a>
     
     <a class="link" [routerLink] ="['/tienda']" routerLinkActive = "link-active">Tienda</a>
     
@@ -13,14 +13,13 @@
     <a href="javascript:void(0);" class="icon" id="rayas" (click)="display()">
         <img src="assets/img/icono.png" onmouseover="this.src='assets/img/icono-rosa.png';" onmouseout="this.src='assets/img/icono.png';">
     </a>
-    
-    <a  class = "active imagen" style="float: right;">
-        <img src= "assets/img/carrito.png" onmouseover="this.src='assets/img/carrito-rosa.png';" onmouseout="this.src='assets/img/carrito.png';" >
-    </a>
-   
-    <a class = "active imagen" style="float: right;">
-        <img src= "assets/img/user.png" onmouseover="this.src='assets/img/user-rosa.png';" onmouseout="this.src='assets/img/user.png';">
+
+    <a style="float: right;" [routerLink] ="['/home']">
+        <img class = "imagen" src= "assets/img/carrito.png" onmouseover="this.src='assets/img/carrito-rosa.png';" onmouseout="this.src='assets/img/carrito.png';" >
     </a>
 
-    
+    <a style="float: right;" [routerLink] ="['/home']">
+        <img class = "imagen" src= "assets/img/user.png" onmouseover="this.src='assets/img/user-rosa.png';" onmouseout="this.src='assets/img/user.png';">
+    </a>
+   
 </div>
