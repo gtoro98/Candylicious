@@ -1,6 +1,17 @@
+/* Reiniciar valores! */
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
 .navbar {
   background-color: #F1BABF;;
   overflow: hidden;
+  /* Deberia corregir el problema del borde */
+  left: 0;
+  top: 0;
+  position: fixed;
 }
 
 /* Style the links inside the navigation bar */
