@@ -1,7 +1,19 @@
 .productoCard{
     background-color: rgba(196, 196, 196, 0.26);
+    position: relative;
+    border-radius: 2em;
+}
+
+.body{
+    position: relative;
 }
 
 .botonEditar{
     background-color: rgba(218, 25, 25, 0.92);
+}
+
+.botonGuardar{
+    position: fixed;
+    bottom: 1em; 
+    right: 1em;
 }

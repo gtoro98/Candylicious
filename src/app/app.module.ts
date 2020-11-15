@@ -20,6 +20,9 @@ import { ButtonComponent } from './components/button/button.component';
 import { ProductoFormComponent } from './components/producto-form/producto-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditarProductoComponent } from './pages/editar-producto/editar-producto.component';
+import { ProductoCardComponent } from './components/producto-card/producto-card.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProductoDetallesComponent } from './pages/producto-detalles/producto-detalles.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { EditarProductoComponent } from './pages/editar-producto/editar-producto
     CreateProductComponent,
     ButtonComponent,
     ProductoFormComponent,
-    EditarProductoComponent
+    EditarProductoComponent,
+    ProductoCardComponent,
+    LoginComponent,
+    ProductoDetallesComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +46,7 @@ import { EditarProductoComponent } from './pages/editar-producto/editar-producto
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
+  
 
     FormsModule,
     ReactiveFormsModule,

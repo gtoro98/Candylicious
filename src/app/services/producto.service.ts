@@ -32,4 +32,8 @@ export class ProductoService {
   editarProducto(data: Producto, productoId: string): Promise<void> {
     return this.productoCollection.doc<Producto>(productoId).update(data);
   }
+
+  deleteProducto(productoId: string): Promise<void> {
+    return this.productoCollection.doc<Producto>(productoId).delete();
+  }
 }

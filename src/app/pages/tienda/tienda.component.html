@@ -2,15 +2,8 @@
 <div class="body">
     <p>tienda works!</p>
     <div class= "productoCard" *ngFor="let producto of productos">
-        <ul>
-            <li>{{ producto.$key }}</li>
-            <li>{{ producto.nombre }}</li>
-            <li>{{ producto.categoria }}</li>
-            <li>{{ producto.sabor }}</li>
-            <li>{{ producto.precio }}</li>
-            <a class = "botonEditar" 
-            [routerLink] = "['/producto', producto.$key, 'editar']"> Editar Producto</a>
-        </ul>
+        <app-producto-card [producto] = 'producto'></app-producto-card>
+        
     </div>
-    <app-button (click)="functioncall($event)" [label] = "label"></app-button>
+    <app-button class = "botonGuardar"  (click)="functioncall($event)" [label] = "label"></app-button>
 </div>

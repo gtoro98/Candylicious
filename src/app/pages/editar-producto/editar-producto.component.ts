@@ -30,8 +30,7 @@ export class EditarProductoComponent implements OnInit {
       this.producto = {
         $key: item.payload.id,
         ...item.payload.data(),
-      }
-      console.log(item.payload.data());
+      };
 
     })
   }

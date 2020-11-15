@@ -5,6 +5,8 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { CreateProductComponent } from './pages/create-product/create-product.component';
 import { EditarProductoComponent } from './pages/editar-producto/editar-producto.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProductoDetallesComponent } from './pages/producto-detalles/producto-detalles.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 
 const routes: Routes = [
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'producto/:productoId/editar',
     component: EditarProductoComponent,
+  },
+  {
+    path: 'producto/:productoId/detalles',
+    component: ProductoDetallesComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   
 
