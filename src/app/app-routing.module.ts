@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { CreateProductComponent } from './pages/create-product/create-product.component';
@@ -7,7 +8,9 @@ import { EditarProductoComponent } from './pages/editar-producto/editar-producto
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProductoDetallesComponent } from './pages/producto-detalles/producto-detalles.component';
+import { SignupComponent } from './pages/signup/signup.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 const routes: Routes = [
   {
@@ -28,10 +31,12 @@ const routes: Routes = [
   },
   {
     path: 'create-product',
+    canActivate: [AuthGuard],
     component: CreateProductComponent,
   },
   {
     path: 'producto/:productoId/editar',
+    canActivate: [AuthGuard],
     component: EditarProductoComponent,
   },
   {
@@ -41,6 +46,15 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+  },
+  {
+    path: 'user-details/:userId',
+    canActivate: [AuthGuard],
+    component: UserDetailsComponent,
   },
   
 

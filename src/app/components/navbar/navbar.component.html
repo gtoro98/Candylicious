@@ -16,13 +16,33 @@
         <img src="assets/img/icono.png" onmouseover="this.src='assets/img/icono-rosa.png';" onmouseout="this.src='assets/img/icono.png';">
     </a>
     
-    <a  class = "active imagen" style="float: right;">
+    <a  
+    class = "active imagen" 
+    style="float: right;"
+    *ngIf = 'isAuthenticated'
+    >
         <img src= "assets/img/carrito.png" onmouseover="this.src='assets/img/carrito-rosa.png';" onmouseout="this.src='assets/img/carrito.png';" >
     </a>
-   
-    <a class = "active imagen" [routerLink] ="['/login']" routerLinkActive = "link-active" style="float: right;">
-        <img src= "assets/img/user.png" onmouseover="this.src='assets/img/user-rosa.png';" onmouseout="this.src='assets/img/user.png';">
-    </a>
+   <div *ngIf = 'isAuthenticated'>
+        <a 
+        class = "active imagen" 
+        [routerLink] ="['/user-details', user.displayName]" routerLinkActive = "link-active"
+        style="float: right;"
+        >
+            <img src= "assets/img/user.png" onmouseover="this.src='assets/img/user-rosa.png';" onmouseout="this.src='assets/img/user.png';">
+        </a>
+   </div>
+
+    <div *ngIf = '!isAuthenticated'>
+        <button [routerLink] ="['/login']">
+        LogIn
+        </button>
+    </div>
+    
+    <div *ngIf = '!isAuthenticated'>
+        
+    </div>
+    
 
     
 </div>

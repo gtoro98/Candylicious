@@ -23,6 +23,9 @@ import { EditarProductoComponent } from './pages/editar-producto/editar-producto
 import { ProductoCardComponent } from './components/producto-card/producto-card.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProductoDetallesComponent } from './pages/producto-detalles/producto-detalles.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { ProductoDetallesComponent } from './pages/producto-detalles/producto-de
     EditarProductoComponent,
     ProductoCardComponent,
     LoginComponent,
-    ProductoDetallesComponent
+    ProductoDetallesComponent,
+    UserDetailsComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +55,7 @@ import { ProductoDetallesComponent } from './pages/producto-detalles/producto-de
 
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
 
   ],
   providers: [],

@@ -1,5 +1,8 @@
 <ul>
-    <button class = "botonEliminar" (click) = "deleteProducto(producto.$key)">X</button>
+    <button class = "botonEliminar"
+     (click) = "deleteProducto(producto.$key)"
+     *ngIf = 'isAuthenticated'
+     >X</button>
     <li>{{ producto.$key }}</li>
     <li>
         <a [routerLink] = "['/producto', producto.$key, 'detalles']">
@@ -10,5 +13,7 @@
     <li>{{ producto.sabor }}</li>
     <li>{{ producto.precio }}</li>
     <a class = "botonEditar" 
-    [routerLink] = "['/producto', producto.$key, 'editar']"> Editar Producto</a>
+    [routerLink] = "['/producto', producto.$key, 'editar']"
+    *ngIf = 'isAuthenticated'
+    > Editar Producto</a>
 </ul>

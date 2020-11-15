@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { UrlSegment } from '@angular/router';
+import { User } from 'firebase';
 import { Producto } from 'src/app/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 
@@ -10,6 +12,8 @@ import { ProductoService } from 'src/app/services/producto.service';
 export class ProductoCardComponent implements OnInit {
 
   @Input() producto: Producto;
+  @Input() user: User = null;
+  @Input() isAuthenticated: boolean = false;
 
   constructor(private productoService: ProductoService) { }
 

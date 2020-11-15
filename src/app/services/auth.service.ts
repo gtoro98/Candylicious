@@ -16,6 +16,22 @@ export class AuthService {
     })
   }
 
+  signUpWithCredentials(email: string, password: string): Promise<void>{
+    return this.afAuth.createUserWithEmailAndPassword(email, password).then(response =>{
+      if(response){
+        localStorage.setItem('user', JSON.stringify(response.user));
+      }
+    })
+  }
+
+  logInWithCredentials(email: string, password: string): Promise<void>{
+    return this.afAuth.signInWithEmailAndPassword(email, password).then((response) =>{
+      if(response){
+        localStorage.setItem('user', JSON.stringify(response.user));
+      }
+    })
+  }
+
   isAuthenticated(): boolean{
     const user: User = JSON.parse(localStorage.getItem('user'))?? null
 
@@ -26,6 +42,12 @@ export class AuthService {
   }
   getCurrentUser(): Observable<User>{
     return this.afAuth.authState;
+  }
+
+  logOut(): Promise<void>{
+    return this.afAuth.signOut().then(() => {
+      localStorage.removeItem('user');
+    }).catch(err => console.log(err))
   }
 
 }

@@ -1,14 +1,15 @@
+<p>signup works!</p>
 <div class = "container">
     <div class = "sub-title">
-        Iniciar Sesion
+        Registrarse
     </div>
     <div>
         <span> 
-            Aun no tienes una cuenta? 
+            Ya tienes tienes una cuenta? 
         </span>
-        <a class="link" [routerLink] ="['/signup']" routerLinkActive = "link-active" >Registrate</a>
+        <a class="link" [routerLink] ="['/login']" routerLinkActive = "link-active" >Iniciar Sesion</a>
     </div>
-    <form [formGroup] = "logInForm" (ngSubmit) = "onSubmit()">
+    <form [formGroup] = "signUpForm" (ngSubmit) = "onSubmit()">
        
         <div id = "text">
             <label class = "text" for="email">Email:</label>
@@ -31,8 +32,29 @@
             >
             
         </div>
+
+        <div>
+            <label class="text" for="telefono">Telefono:</label>
+            <input 
+            type="text"
+            formControlName = "telefono"
+            placeholder="Introduzca su telefono"
+            id="telefono"
+            >
+            
+        </div>
+
+        <div>
+            <label class="text" for="direccion">Direccion:</label>
+            <input 
+            type="text"
+            formControlName = "direccion"
+            placeholder="Introduzca su direccion"
+            id="direccion"
+            >
+            
+        </div>
         <button (click) = "onSubmit()">Registrarse</button>
     </form>
     <button (click) = "logInWithGoogle()">LogIn with Google</button>
 </div>
-

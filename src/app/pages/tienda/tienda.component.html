@@ -2,7 +2,11 @@
 <div class="body">
     <p>tienda works!</p>
     <div class= "productoCard" *ngFor="let producto of productos">
-        <app-producto-card [producto] = 'producto'></app-producto-card>
+        <app-producto-card 
+        [producto] = 'producto'
+        [isAuthenticated] = 'isAuthenticated'
+        [user] = 'user'
+        ></app-producto-card>
         
     </div>
     <app-button class = "botonGuardar"  (click)="functioncall($event)" [label] = "label"></app-button>

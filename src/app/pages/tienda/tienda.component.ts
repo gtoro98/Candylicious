@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from 'firebase';
 import { Producto } from 'src/app/models/producto';
+import { AuthService } from 'src/app/services/auth.service';
 import { ProductoService } from 'src/app/services/producto.service';
 
 @Component({
@@ -13,9 +15,17 @@ export class TiendaComponent implements OnInit {
   productos: Array<Producto> = [];
   label = "Agregar";
 
-  constructor( private productoService: ProductoService, private router: Router) { }
+  isAuthenticated = false;
+  user: User = null;
+
+  constructor( 
+    private productoService: ProductoService, 
+    private router: Router,
+    private authService: AuthService,
+    ) { }
 
   ngOnInit(): void {
+    this.getCurrentUser();
     this.getAllProductos();
   }
 
@@ -33,6 +43,17 @@ export class TiendaComponent implements OnInit {
 
   functioncall(e: MouseEvent) {
     this.router.navigateByUrl('/create-product');
+}
+getCurrentUser(): void{
+  this.authService.getCurrentUser().subscribe(response => {
+    if(response){
+      this.isAuthenticated = true;
+      this.user = response;
+      return;
+    }
+    this.isAuthenticated = false;
+    this.user = null;
+  });
 }
    
 }
