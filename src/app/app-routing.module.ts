@@ -9,6 +9,10 @@ import { TiendaComponent } from './pages/tienda/tienda.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'home', pathMatch: 'full'
+  },
+  {
     path: 'home',
     component: InicioComponent,
   },
