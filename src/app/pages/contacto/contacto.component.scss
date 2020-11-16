@@ -71,8 +71,10 @@ div{
 }
 
 #footer{
+    padding: 0%;
     #footerImage{
         width: 100%;
+        padding: 0%;
     }
     #networks{
         position: absolute;
@@ -82,10 +84,10 @@ div{
         display: flex;
         justify-content: space-around;
         padding: 0vh 4vw;
-        background-color: black;
         /*Se supone que aquí va el position absolute*/
         .contenedor {
             border: 0px;
+            padding-bottom: 2vh;
             height: 10vh;
             text-align: center; 
             .network{
