@@ -12,6 +12,9 @@
     <li>{{ producto.categoria }}</li>
     <li>{{ producto.sabor }}</li>
     <li>{{ producto.precio }}</li>
+    <li>
+        <img src= "{{producto.imagen}}">
+    </li>
     <a class = "botonEditar" 
     [routerLink] = "['/producto', producto.$key, 'editar']"
     *ngIf = 'isAuthenticated'

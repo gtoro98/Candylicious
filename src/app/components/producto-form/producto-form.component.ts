@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Producto } from 'src/app/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 
@@ -17,7 +19,14 @@ export class ProductoFormComponent implements OnInit {
   label = "Guardar";
   productoId: string = null;
 
+  basePath = '/images';                       
+  downloadableURL = '';                      
+  task: AngularFireUploadTask;               
+
+  progressValue: Observable<number>;
+
   constructor(
+    private fireStorage: AngularFireStorage,
     private productoService: ProductoService, 
     private fb: FormBuilder,
     private router: Router, 
@@ -32,10 +41,10 @@ export class ProductoFormComponent implements OnInit {
     
 
   }
-
+//new FormControl([''] ,[Validators.required])
   createForm(): void {
     this.productoForm = this.fb.group({
-    nombre: [''],
+    nombre:[''],
     sabor: [''],
     categoria: [''],
     precio: [''],
@@ -71,6 +80,7 @@ export class ProductoFormComponent implements OnInit {
       precio: this.editarProducto.precio,
       marca: this.editarProducto.marca,
       descripcion: this.editarProducto.descripcion,
+      imagen: this.downloadableURL,
     })
   }
 
@@ -84,14 +94,15 @@ export class ProductoFormComponent implements OnInit {
 
 
   onSubmit(e: MouseEvent) {
- 
+
     const newProducto: Producto = {
       nombre: this.productoForm.get('nombre').value,
       sabor: this.productoForm.get('sabor').value,
       categoria: this.productoForm.get('categoria').value,
       precio: this.productoForm.get('precio').value,
       marca: this.productoForm.get('marca').value,
-      descripcion: this.productoForm.get('descripcion').value
+      descripcion: this.productoForm.get('descripcion').value,
+      imagen: this.downloadableURL,
     }
  
     if(this.editarProducto){
@@ -104,8 +115,27 @@ export class ProductoFormComponent implements OnInit {
       this.createProducto(newProducto)
       console.log("Producto creado")
     }
-
-
 }
+
+async onFileChanged(event) {
+  const file = event.target.files[0];
+  if (file) {
+     const filePath = `${this.basePath}/${file.name}`;  
+     this.task =  this.fireStorage.upload(filePath, file);    
+
+
+     this.progressValue = this.task.percentageChanges();       // <<<<< Percentage of uploading is given
+
+
+     (await this.task).ref.getDownloadURL().then(url => {this.downloadableURL = url; });  
+
+
+   } else {  
+     alert('No images selected');
+     this.downloadableURL = ''; }
+
+
+
+ }
 
 }

@@ -1,6 +1,22 @@
 
 <div class = "container">
     <form [formGroup] = "productoForm" (ngSubmit) = "onSubmit">
+
+        <input type="file" name="file" (input)="onFileChanged($event)" accept=".jpeg,.jpg,.png,.svg" />
+        <br />
+       
+        <img [src]="downloadableURL"  onerror="this.onerror=null;this.src='assets/noimage.jpg';"  width="425px" height="300px"/>
+        
+        <br />
+      
+      <!-- Progress Bar -->
+      
+        <div *ngIf="progressValue | async as val">
+          <progress type="warning"  [value]="val" style="height: 7mm; width: 50%" max="100" ></progress>
+          <br />
+            <span *ngIf="val<100" style="color:rgb(255, 60, 0); font-size: 17px; font-weight: 410;">{{ val | number}}% </span><span *ngIf="val == 100" style="color:rgb(1, 153, 34);  font-size: 17px; font-weight: 410;">Completed !</span>
+        </div>
+
         <div id = "sub-title">
             <label class = "sub-title" for="nombre">Nombre:</label>
             <input 
@@ -8,7 +24,7 @@
             formControlName = "nombre"
             placeholder="Introduzca el nombre"
             id="nombre"
-            >
+            required>
             
         </div>
         <div>
