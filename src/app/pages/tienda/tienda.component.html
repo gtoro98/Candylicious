@@ -1,16 +1,25 @@
+<div>
+    <div id="central">
+        <div class="flechas">
 
-<div class="body">
-    <p>tienda works!</p>
-    <div class= "productoCard" *ngFor="let producto of productos">
-        <ul>
-            <li>{{ producto.$key }}</li>
-            <li>{{ producto.nombre }}</li>
-            <li>{{ producto.categoria }}</li>
-            <li>{{ producto.sabor }}</li>
-            <li>{{ producto.precio }}</li>
-            <a class = "botonEditar" 
-            [routerLink] = "['/producto', producto.$key, 'editar']"> Editar Producto</a>
-        </ul>
+        </div>
+        <div id="contenedor">
+            <div id= "productoCard" *ngFor="let producto of productos">
+                <ul>
+                    <li>{{ producto.$key }}</li>
+                    <li>{{ producto.nombre }}</li>
+                    <li>{{ producto.categoria }}</li>
+                    <li>{{ producto.sabor }}</li>
+                    <li>{{ producto.precio }}</li>
+                    <a class = "botonEditar" 
+                    [routerLink] = "['/producto', producto.$key, 'editar']"> Editar Producto</a>
+                </ul>
+            </div>
+        </div>
+        <div class="flechas">
+            
+        </div>
+        <app-button (click)="functioncall($event)" [label] = "label"></app-button>
     </div>
-    <app-button (click)="functioncall($event)" [label] = "label"></app-button>
+    
 </div>

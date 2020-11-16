@@ -1,4 +1,31 @@
-.productoCard{
+/* Reiniciar valores! */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#central{
+    width: 100%;
+    display: flex;
+    margin-top: 5vh;
+    padding-top: 0vh;
+    height: 92vh;
+    .flechas{
+        width: 5%;
+    }
+    #contenedor{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        padding: 5vh;
+        #productoCard{
+            width: 22%;
+        }
+    }
+}
+
+#productoCard{
     background-color: rgba(196, 196, 196, 0.26);
 }
 
