@@ -11,7 +11,7 @@
     align-items: center;
     margin-top: 5vh;
     padding-top: 0vh;
-    height: 92vh;
+    height: 88vh;
     .flechas{
         width: 5%;
     }
@@ -39,16 +39,25 @@
                     color: #E57A7F;
                     text-align: center;
                 }
-                
+                #division{
+                    width: 100%;
+                    height: 70%;
+                    display: flex;
+                    justify-content: space-between;
+                    #categoria{
+                        font-size: 3vh;
+                        color: #E57A7F;
+                    }
+                    #sabor{
+                        font-size: 3vh;
+                        color: #E57A7F;
+                    }
+                }
             }
         }
     }
 }
 
-#productoCard{
-    background-color: rgba(196, 196, 196, 0.26);
-}
-
-.botonEditar{
-    background-color: rgba(218, 25, 25, 0.92);
+#boton{
+    background-color: #DB2122;
 }
