@@ -5,15 +5,21 @@
         </div>
         <div id="contenedor">
             <div id= "productoCard" *ngFor="let producto of productos">
-                <ul>
-                    <li>{{ producto.$key }}</li>
-                    <li>{{ producto.nombre }}</li>
-                    <li>{{ producto.categoria }}</li>
-                    <li>{{ producto.sabor }}</li>
-                    <li>{{ producto.precio }}</li>
-                    <a class = "botonEditar" 
-                    [routerLink] = "['/producto', producto.$key, 'editar']"> Editar Producto</a>
-                </ul>
+                <div id="productoImage">
+
+                </div>
+                <div id="datos">
+                    <h2 id="nombre">{{ producto.nombre }}</h2>
+                    <ul>
+                        <li>{{ producto.$key }}</li>
+                        <li>{{ producto.nombre }}</li>
+                        <li>{{ producto.categoria }}</li>
+                        <li>{{ producto.sabor }}</li>
+                        <li>{{ producto.precio }}</li>
+                        <a class = "botonEditar" 
+                        [routerLink] = "['/producto', producto.$key, 'editar']"> Editar Producto</a>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="flechas">
