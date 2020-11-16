@@ -15,6 +15,10 @@ import { UserDetailsComponent } from './pages/user-details/user-details.componen
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'home', pathMatch: 'full'
+  },
+  {
+    path: 'home',
     component: InicioComponent,
   },
   {
