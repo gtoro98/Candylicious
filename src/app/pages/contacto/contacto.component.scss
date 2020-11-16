@@ -3,7 +3,13 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    /* Deberia quitar el margen izq */
+    
   }
+
+div{
+    left: 0;
+}
 
 #principal{
   width: 100%;
