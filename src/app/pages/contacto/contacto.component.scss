@@ -3,7 +3,7 @@
     margin: 0% !important;
     padding: 0%;
     box-sizing: border-box;
-    /* Deberia quitar el margen izq */   
+       
   }
 
 div{
@@ -75,6 +75,9 @@ div{
         width: 100%;
     }
     #networks{
+        position: absolute;
+        top: 180%;
+        left: 1%;
         width: 30%;
         display: flex;
         justify-content: space-around;
