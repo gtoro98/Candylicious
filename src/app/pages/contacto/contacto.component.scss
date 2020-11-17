@@ -11,13 +11,13 @@ div{
 }
 
 #principal{
-  width: 100%;
-  height: 100vh;
-  #principalImage {
+    width: 100%;
+    height: 100vh;
+    #principalImage {
     width: 100%;
     height: 100%;
-  }
-  #contactanos{
+    }
+    #contactanos{
     /* Titulo sobre imagen */
     text-align: center;
     position: absolute;
@@ -26,7 +26,7 @@ div{
     transform: translate(-50%, -50%);
     color: white;
     font-size: 8vw;
-  }
+    } 
 }
 
 #central{
@@ -34,6 +34,7 @@ div{
     height: 70vh;
     #formulario{
         width: 45%;
+        height: 70vh;
         padding: 8vh;
         #titulo{
             width: 100%;
@@ -50,6 +51,7 @@ div{
     }
     #mapa{
         width: 55%;
+        height: 70vh;
         display: flex;
         flex-direction: column;
         #mapaImage{
@@ -94,6 +96,31 @@ div{
                 width: 100%;
                 height: 100%;
             }
-          }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #principal{
+        #contactanos{
+            top: 30%;
+        }
+    }
+    #central{
+        display: flex;
+        flex-direction: column;
+        height: 140vh;
+        #formulario{
+            width: 100%;
+        }
+        #mapa{
+            width: 100%;
+        }
+    }
+    #footer{
+        #networks{
+            top: 250%;
+            width: 35%;
+        }
     }
 }
