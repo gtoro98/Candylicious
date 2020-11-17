@@ -83,6 +83,23 @@
     
 }
 
+#ingresar{
+    position: absolute;
+    top: 75%;
+    left: 62%;
+    width: 10%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 4vh;
+    color: white;
+    border-radius: 20px;
+    background-color: #DB2122;
+    cursor: pointer;
+}
+
 #footer{
     width: 100%;
     height: 22vh;
@@ -96,7 +113,6 @@
         display: flex;
         justify-content: space-around;
         padding: 0vh 3vw;
-        /*Se supone que aquí va el position absolute*/
         .contenedor {
             border: 0px;
             padding-bottom: 2vh;
@@ -110,9 +126,58 @@
     }
 }
 
-#ingresar{
-    position: absolute;
-    top: 79%;
-    left: 62%;
-}
+@media screen and (max-width: 800px) {
+    #container{
+        margin-top: 5vw; /*Revisar*/
+        #formulario{
+            width: 100%;
+            height: 60vh;
+            #sub-title{
+                height: 30%;
+                font-weight: 700;
+                font-size: 8vw;
+            }
+            .link-texto{
+                padding-top: 3vw;
+                height: 20%;
+                .links{
+                    width: 100%;
+                    font-size: 4vw;
+                    .texto{
+                        padding-right: 1vh;
+                    }
+                }
+            }
+            #form{
+                width: 100%;
+                height: 30%;
+                padding-top: 3vw;
+                .text{
+                    font-size: 4vw;
+                }
+                input{
+                    width: 60vw;
+                    height: 7vh;
+                    border-bottom: 0.5vw solid #EFB0B6;
+                    font-size: 4vw;
+                }
+            }
+        }
+        
+    }
+    
+    #ingresar{
+        width: 30%;
+        height: 8%;
+        top: 68%;
+        left: 62%;
+        font-size: 4vw;
+    }
 
+    #footer{
+        #networks{
+            width: 40%;
+            padding: 0vh 3vw;
+        }
+    }
+}
