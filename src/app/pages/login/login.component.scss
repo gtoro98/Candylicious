@@ -1,40 +1,112 @@
-.container{
-    margin: auto;
-    width: 50%;
-}
-.form{
-    
-    padding: 2em;
-    position: relative;
-}
-
-input{
-
-    border: 3px solid #EFB0B6;
+*{
+    margin: 0% !important;
+    padding: 0%;
     box-sizing: border-box;
-    padding: 1em 1em;
-    border-radius: 10px;
-    width: 171px;
-    height: 48px;
 }
 
-.text{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 2em;
-    line-height: 1em;
-
-color: rgba(217, 62, 70, 0.69);
+#container{
+    width: 100%;
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5vh;
+    #formulario{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        #sub-title{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 30%;
+            text-align: center;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 8vh;
+            color:  #E57A7F;
+        }
+        .link-texto{
+            padding-top: 3vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 20%;
+            .links{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4vh;
+                color: #E57A7F;
+                .texto{
+                    padding-right: 1vw;
+                }
+                .link{
+                    font-weight: 700;
+                    color: #E57A7F !important;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+        #form{
+            width: 100%;
+            height: 30%;
+            padding-top: 3vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .text{
+                font-family: Roboto;
+                font-style: normal;
+                font-size: 4vh;
+                color: #E57A7F;
+            }
+            input{
+                width: 35vw;
+                height: 7vh;
+                border: 0vh;
+                border-bottom: 0.5vh solid #EFB0B6;
+                font-size: 4vh;
+                padding: 0vh;
+                color: #E57A7F;
+            }
+        }
+    }
+    
 }
 
-.sub-title{
-    text-align: center;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 3em;
-    line-height: 1em;
-
-color: rgba(217, 62, 70, 0.69);
+#footer{
+    width: 100%;
+    height: 22vh;
+    background-color: #F1BABF;
+    clip-path: polygon(100% 100%, 0 0%, 0 100%);
+    #networks{
+        position: absolute;
+        top: 87.5%;
+        left: 0%;
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0vh 3vw;
+        /*Se supone que aquí va el position absolute*/
+        .contenedor {
+            border: 0px;
+            padding-bottom: 2vh;
+            height: 10vh;
+            text-align: center; 
+            .network{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 }
+

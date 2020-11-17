@@ -3,8 +3,7 @@
     margin: 0% !important;
     padding: 0%;
     box-sizing: border-box;
-       
-  }
+}
 
 div{
     left: 0;
@@ -70,6 +69,12 @@ div{
             }
         }
     }
+}
+
+#ingresar{
+    position: absolute;
+    top: 180%;
+    left: 1%;
 }
 
 #footer{

@@ -1,38 +1,61 @@
-<div class = "container">
-    <div class = "sub-title">
-        Iniciar Sesion
-    </div>
-    <div>
-        <span> 
-            Aun no tienes una cuenta? 
-        </span>
-        <a class="link" [routerLink] ="['/signup']" routerLinkActive = "link-active" >Registrate</a>
-    </div>
-    <form [formGroup] = "logInForm" (ngSubmit) = "onSubmit()">
-       
-        <div id = "text">
-            <label class = "text" for="email">Email:</label>
-            <input 
-            type="text"
-            formControlName = "email"
-            placeholder="Introduzca su correo electronico"
-            id="email"
-            >
-            
+<body id = "container">
+    <div id="formulario">
+        <div id = "sub-title">
+            Iniciar sesión
         </div>
-        
-        <div>
-            <label class="text" for="contrasena">Contrasena:</label>
-            <input 
-            type="text"
-            formControlName = "contrasena"
-            placeholder="Introduzca su contrasena"
-            id="contrasena"
-            >
-            
+        <div class = "link-texto">
+            <div class="links">
+                <span class="texto"> ¿Aún no tienes una cuenta? </span>
+                <a class="link" [routerLink] ="['/signup']">Regístrate</a>
+            </div>
+            <div class="links">
+                <span class="texto"> Inicia sesión con google </span>
+                <a class="link" (click) = "logInWithGoogle()">aquí</a>
+            </div>
         </div>
-        <button (click) = "onSubmit()">Registrarse</button>
-    </form>
-    <button (click) = "logInWithGoogle()">LogIn with Google</button>
+        <form id="form" [formGroup] = "logInForm" (ngSubmit) = "onSubmit()">
+            <div>
+                <input 
+                form="email"
+                type="text"
+                formControlName = "email"
+                placeholder="Correo electrónico"
+                id="email"
+                >
+            </div>          
+            <div>
+                <input
+                type="text"
+                formControlName = "contrasena"
+                placeholder="Contrasena"
+                id="contrasena"
+                >
+                
+            </div>
+        </form>
+        <div class="link-texto">
+            <div class="links">
+                <span class="texto">¿Olvidaste la contraseña? Recuperala</span>
+                <a class="link" [routerLink] ="['/signup']">aquí</a>
+            </div>
+        </div>      
+    </div>
+</body>
+<div>
+    <a id="ingresar" [routerLink] ="['/signup']">Ingresar</a>
 </div>
+<div id="footer">
+    <div id="networks">
+        <a class = "contenedor" [routerLink] ="['/home']">
+            <img class = "network" src= "assets/img/instagram.png" onmouseover="this.src='assets/img/instagram-rosa.png'; "onmouseout="this.src='assets/img/instagram.png';">
+        </a>
 
+        <a class = "contenedor" [routerLink] ="['/home']">
+            <img class = "network" src= "assets/img/twitter.png" onmouseover="this.src='assets/img/twitter-rosa.png';" onmouseout="this.src='assets/img/twitter.png';">
+        </a>
+
+        <a class = "contenedor" [routerLink] ="['/home']">
+            <img class = "network" src= "assets/img/facebook.png" onmouseover="this.src='assets/img/facebook-rosa.png';" onmouseout="this.src='assets/img/facebook.png';">
+        </a>
+    </div>
+</div>
