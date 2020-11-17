@@ -10,7 +10,14 @@
         <a class="link" [routerLink] ="['/login']" routerLinkActive = "link-active" >Iniciar Sesion</a>
     </div>
     <form [formGroup] = "signUpForm" (ngSubmit) = "onSubmit()">
-       
+
+        <label class = "text" for="nombre">Nombre:</label>
+        <input 
+        type="text"
+        formControlName = "nombre"
+        placeholder="Introduzca su nombre"
+        id="nombre"
+        >
         <div id = "text">
             <label class = "text" for="email">Email:</label>
             <input 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminGuard } from './guards/admin.guard';
 import { AuthGuard } from './guards/auth.guard';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
@@ -35,12 +36,12 @@ const routes: Routes = [
   },
   {
     path: 'create-product',
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard, AdminGuard],
     component: CreateProductComponent,
   },
   {
     path: 'producto/:productoId/editar',
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard, AdminGuard],
     component: EditarProductoComponent,
   },
   {
@@ -53,6 +54,7 @@ const routes: Routes = [
   },
   {
     path: 'signup',
+    canActivate: [!AuthGuard],
     component: SignupComponent,
   },
   {

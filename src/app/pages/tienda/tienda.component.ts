@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'firebase';
 import { Producto } from 'src/app/models/producto';
+import { UserDetails } from 'src/app/models/user-details';
 import { AuthService } from 'src/app/services/auth.service';
 import { ProductoService } from 'src/app/services/producto.service';
 
@@ -16,7 +17,7 @@ export class TiendaComponent implements OnInit {
   label = "Agregar";
 
   isAuthenticated = false;
-  user: User = null;
+  user: UserDetails = null;
 
   constructor( 
     private productoService: ProductoService, 
@@ -48,7 +49,7 @@ getCurrentUser(): void{
   this.authService.getCurrentUser().subscribe(response => {
     if(response){
       this.isAuthenticated = true;
-      this.user = response;
+      this.user = JSON.parse(localStorage.getItem('user'));
       return;
     }
     this.isAuthenticated = false;

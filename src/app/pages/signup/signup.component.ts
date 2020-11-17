@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserDetails } from 'src/app/models/user-details';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -11,6 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class SignupComponent implements OnInit {
 
   signUpForm: FormGroup = null;
+  newUser: UserDetails = null;
 
   constructor(
     private authService: AuthService,
@@ -25,10 +27,11 @@ export class SignupComponent implements OnInit {
 
   createForm(): void {
     this.signUpForm = this.fb.group({
-    email: [''],
-    contrasena: [''],
-    telefono: [''],
-    direccion: [''],
+      nombre: [''],
+      email: [''],
+      contrasena: [''],
+      telefono: [''],
+      direccion: [''],
    
     });
   }
@@ -46,8 +49,12 @@ export class SignupComponent implements OnInit {
 
     })
     this.authService.signUpWithCredentials(
+      this.signUpForm.get('nombre').value,
       this.signUpForm.get('email').value,
       this.signUpForm.get('contrasena').value,
+      this.signUpForm.get('telefono').value,
+      this.signUpForm.get('direccion').value,
+      
     ).then(() => {
       this.router.navigate(["/"])
     }).catch(err => {console.log(err)})
