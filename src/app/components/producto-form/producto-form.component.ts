@@ -80,8 +80,11 @@ export class ProductoFormComponent implements OnInit {
       precio: this.editarProducto.precio,
       marca: this.editarProducto.marca,
       descripcion: this.editarProducto.descripcion,
-      imagen: this.downloadableURL,
     })
+    if(this.editarProducto.imagen){
+      this.downloadableURL = this.editarProducto.imagen
+    }
+  
   }
 
   createProducto(newProducto: Producto): void{

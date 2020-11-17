@@ -16,15 +16,18 @@
         </div>
         <div id="contenedor">
             <div id= "productoCard" *ngFor="let producto of productos">
-                <div id="productoImage">
-
+                <div class="productoImage">
+                    <img class="productoImage" src={{producto.imagen}} onerror="this.onerror=null;this.src='assets/img/noImage.png';">
                 </div>
                 <div id="datos">
-                    <h2 id="nombre">{{ producto.nombre }}</h2>
+                    <a class="nombre" [routerLink] = "['/producto',producto.$key, 'detalles']" routerLinkActive = "link-active">
+                        <h2 class="nombre">{{ producto.nombre }}</h2>
+                    </a>
                     <div id="division">
                         <h2 id="categoria">{{ producto.categoria }}</h2>
                         <h2 id="sabor">{{ producto.sabor }}</h2>
                     </div>
+                    <a class = "botonEditar" [routerLink] = "['/producto', producto.$key, 'editar']" *ngIf = "isAuthenticated"> Editar Producto</a>
                     <!--<ul>
                         <li>{{ producto.$key }}</li>
                         <li>{{ producto.nombre }}</li>
@@ -40,7 +43,7 @@
         <div class="flechas">
             
         </div>
-        <app-button id="boton" (click)="functioncall($event)" [label] = "label"></app-button>
+        <app-button id="boton" (click)="functioncall($event)" [label] = "label" *ngIf = "isAuthenticated"></app-button>
     </div> 
  
 </div>
