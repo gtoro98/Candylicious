@@ -151,4 +151,11 @@ div{
         width: 4vw;
         height: 11vh;
     }
+
+    @media screen and (max-width: 600px){
+        #img_5{
+            width: 40vw;
+            height: 50vh;
+        }
+    }
 }
