@@ -19,6 +19,8 @@ export class TiendaComponent implements OnInit {
   isAuthenticated = false;
   user: UserDetails = null;
 
+  navBarOpen = false;
+
   constructor( 
     private productoService: ProductoService, 
     private router: Router,
@@ -55,6 +57,28 @@ getCurrentUser(): void{
     this.isAuthenticated = false;
     this.user = null;
   });
+}
+
+openNav() {
+
+  if(this.navBarOpen === false){
+    document.getElementById("mySidebar").style.width = "25em";
+    document.getElementById("main").style.marginLeft = "25em";
+    console.log("Abriendo...")
+    this.navBarOpen = true;
+  }
+  else{
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    console.log("Cerrando...")
+    this.navBarOpen = false;
+  }
+ 
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+closeNav() {
+ 
 }
    
 }
