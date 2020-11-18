@@ -63,6 +63,76 @@ h1{
     }
 }
 
+#img_3{
+    width: 45vw;
+    height: 91.5vh;
+    position: absolute;
+    top: 8.5vh;
+    right: 0vw;
+}
+
+#img_2{
+    width: 45vw;
+    height: 91.5vh;
+    position: absolute;
+    top: 8.5vh;
+    right: 0vw;
+}
+
+#img_1{
+    width: 45vw;
+    height: 91.5vh;
+    position: absolute;
+    top: 8.5vh;
+    right: 0vw;
+}
+
+#cuadro_botones{
+    width: 14vw;
+    height: 8vh;
+    position: absolute;
+    top: 87vh;
+    left: 55vw;
+    background-color: rgba(238, 123, 127, 0.486);
+}
+
+#boton_carrusel_1{
+    width: 1vw;
+    height: 1vw;
+    position: relative;
+    background-color: rgb(201, 35, 35);
+    border-radius: 100%;
+    border-color:rgba(201, 35, 35, 0.733);
+    color: rgba(201, 35, 35, 0.733);
+    top: 1vw;
+    left: 2vw;
+}
+
+#boton_carrusel_2{
+    width: 1vw;
+    height: 1vw;
+    position: relative;
+    background-color: rgb(224, 55, 55);
+    border-radius: 100%;
+    border-color:  rgb(224, 55, 55);
+    color:  rgb(224, 55, 55);
+    top: 1vw;
+    left: 5vw;
+}
+
+#boton_carrusel_3{
+    width: 1vw;
+    height: 1vw;
+    position: relative;
+    background-color: rgba(255, 0, 0, 0.918);
+    border-radius: 100%;
+    border-color: rgba(255, 0, 0, 0.795);
+    color: rgba(255, 0, 0, 0.842);
+    opacity: 100%;
+    top: 1vw;
+    left: 8vw;
+}
+
 #contenedor1{
     position: absolute;
     left: 3vw;
