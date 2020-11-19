@@ -10,7 +10,21 @@
     </div>
     <form [formGroup] = "signUpForm" (ngSubmit) = "onSubmit()">
        
-        <div id = "text">S
+        <div >
+            <input 
+            type="text"
+            formControlName = "nombre"
+            placeholder="Nombre"
+            id="nombre"
+            >
+            
+        </div>
+
+        <div id="piso_0">
+
+        </div>
+
+        <div >
             <input 
             type="text"
             formControlName = "email"
