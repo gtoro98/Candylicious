@@ -1,60 +1,85 @@
-<p>signup works!</p>
 <div class = "container">
     <div class = "sub-title">
         Registrarse
     </div>
     <div>
-        <span> 
-            Ya tienes tienes una cuenta? 
+        <span id="texto_1"> 
+            ¿Ya tienes tienes una cuenta? 
         </span>
-        <a class="link" [routerLink] ="['/login']" routerLinkActive = "link-active" >Iniciar Sesion</a>
+        <a id="link_1" class="link" [routerLink] ="['/login']" routerLinkActive = "link-active" >Inicia sesión</a>
     </div>
     <form [formGroup] = "signUpForm" (ngSubmit) = "onSubmit()">
        
-        <div id = "text">
-            <label class = "text" for="email">Email:</label>
+        <div id = "text">S
             <input 
             type="text"
             formControlName = "email"
-            placeholder="Introduzca su correo electronico"
+            placeholder="Correo electrónico"
             id="email"
             >
             
         </div>
+
+        <div id="piso_1">
+
+        </div>
         
         <div>
-            <label class="text" for="contrasena">Contrasena:</label>
             <input 
             type="text"
             formControlName = "contrasena"
-            placeholder="Introduzca su contrasena"
+            placeholder="Contraseña"
             id="contrasena"
             >
             
         </div>
 
+        <div id="piso_2">
+
+        </div>
+
         <div>
-            <label class="text" for="telefono">Telefono:</label>
             <input 
             type="text"
             formControlName = "telefono"
-            placeholder="Introduzca su telefono"
+            placeholder="Teléfono"
             id="telefono"
             >
             
         </div>
 
+        <div id="piso_3">
+
+        </div>
+
         <div>
-            <label class="text" for="direccion">Direccion:</label>
             <input 
             type="text"
             formControlName = "direccion"
-            placeholder="Introduzca su direccion"
+            placeholder="Dirección"
             id="direccion"
             >
             
         </div>
-        <button (click) = "onSubmit()">Registrarse</button>
+
+        <div id="piso_4">
+
+        </div>
+
+        <button id="boton_registrarse" (click) = "onSubmit()"><p><strong>Registrarse</strong></p></button>
     </form>
-    <button (click) = "logInWithGoogle()">LogIn with Google</button>
+    <button (click) = "logInWithGoogle()">Login with Google</button>
+</div>
+<div id="footer">
+    <a id= "contenedor1">
+        <img id= "network1" src= "assets/img/instagram.png" onmouseover="this.src='assets/img/instagram-rosa.png'; "onmouseout="this.src='assets/img/instagram.png';">
+    </a>
+
+    <a id= "contenedor2">
+        <img id = "network2" src= "assets/img/twitter.png" onmouseover="this.src='assets/img/twitter-rosa.png';" onmouseout="this.src='assets/img/twitter.png';">
+    </a>
+
+    <a id= "contenedor3">
+        <img id= "network3" src= "assets/img/facebook.png" onmouseover="this.src='assets/img/facebook-rosa.png';" onmouseout="this.src='assets/img/facebook.png';">
+    </a>
 </div>
