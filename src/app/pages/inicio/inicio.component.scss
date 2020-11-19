@@ -54,6 +54,7 @@ h1{
     position: absolute;
     top: 56%;
     left: 36%;
+    cursor: pointer;
     p{
         position: relative;
         top: 1vw;
@@ -106,6 +107,7 @@ h1{
     color: rgba(201, 35, 35, 0.733);
     top: 1vw;
     left: 2vw;
+    cursor: pointer;
 }
 
 #boton_carrusel_2{
@@ -118,6 +120,7 @@ h1{
     color:  rgb(224, 55, 55);
     top: 1vw;
     left: 5vw;
+    cursor: pointer;
 }
 
 #boton_carrusel_3{
@@ -131,33 +134,40 @@ h1{
     opacity: 100%;
     top: 1vw;
     left: 8vw;
+    cursor: pointer;
 }
 
 #contenedor1{
     position: absolute;
     left: 3vw;
     top: 85vh;
+    cursor: pointer;
 }
 #contenedor2{
     position: absolute;
     left: 12vw;
     top: 85vh;
+    cursor: pointer;
 }
 #contenedor3{
     position: absolute;
     left: 22vw;
     top: 85vh;
+    cursor: pointer;
 }
 
 #network1{
     width: 5vw;
     height: 12.5vh;
+    cursor: pointer;
 }
 #network2{
     width: 5vw;
     height: 12.5vh;
+    cursor: pointer;
 }
 #network3{
     width: 4vw;
     height: 11vh;
+    cursor: pointer;
 }

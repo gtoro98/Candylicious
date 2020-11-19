@@ -157,11 +157,33 @@ input{
     position: absolute;
     top: 77vh;
     left: 58vw;
+    cursor: pointer;
     p{
         position: relative;
         text-align: center;
         color: white;
         font-size: 1.2vw;
+    }
+}
+
+#boton_google{
+    width: 13vw;
+    height: 6vh;
+    border: 0;
+    position: absolute;
+    top: 68vh;
+    left: 53vw;
+    background-color: #ffffff00;
+    p{
+        justify-content: center;
+        text-align: center;
+        font-family: Roboto;
+        font-style: underline;
+        font-size: 3vh;
+        color:   #E57A7F;
+        font-weight: 500; 
+        white-space:nowrap;
+        cursor: pointer;
     }
 }
 
@@ -187,19 +209,23 @@ input{
         position: absolute;
         left: 16vw;
         bottom: 1.5vh;
+        cursor: pointer;
     }
 
     #network1{
         width: 5vw;
         height: 12.5vh;
+        cursor: pointer;
     }
     #network2{
         width: 5vw;
         height: 12.5vh;
+        cursor: pointer;
     }
     #network3{
         width: 4vw;
         height: 11vh;
+        cursor: pointer;
     }
 
 }
