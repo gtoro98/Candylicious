@@ -1,28 +1,46 @@
 <div class="navbar" id = "myNavBar">  
-    
-            <img class = "imagen"style = "float: left;" src= "assets/img/logo-candylicious.png">
-    
-    
-    <a class="link" [routerLink] ="['/']" routerLinkActive = "link-active" >Inicio</a>
+
+    <a class = "logo" style="float: left;" [routerLink] ="['/home']">
+        <img class = "imagen" style="float: left;" src= "assets/img/logo-candylicious.png">
+    </a>
+
+    <a class="link" [routerLink] ="['/home']" routerLinkActive = "link-active" >Inicio</a>
     
     <a class="link" [routerLink] ="['/tienda']" routerLinkActive = "link-active">Tienda</a>
     
-    <a class="link" [routerLink] ="['/contacto']" routerLinkActive = "link-active">Contacto</a>
-    
+    <a class="link" [routerLink] ="['/contacto']" routerLinkActive = "link-active">Contacto</a>  
     
     <a class= "link"  [routerLink] ="['/about-us']" routerLinkActive = "link-active">Nosotros</a>
     
-    <a href="javascript:void(0);" class="icon" id="rayas" (click)="display()">
-        <img src="assets/img/icono.png" onmouseover="this.src='assets/img/icono-rosa.png';" onmouseout="this.src='assets/img/icono.png';">
+    <a class = "contenedor" href="javascript:void(0);" class="icon" (click)="display()">
+        <img class = "imagen" id="rayas" src="assets/img/icono.png" onmouseover="this.src='assets/img/icono-rosa.png';" onmouseout="this.src='assets/img/icono.png';">
     </a>
     
-    <a  class = "active imagen" style="float: right;">
+    <a  
+    class = "contenedor" 
+    style="float: right;"
+    *ngIf = 'isAuthenticated'
+    >
         <img src= "assets/img/carrito.png" onmouseover="this.src='assets/img/carrito-rosa.png';" onmouseout="this.src='assets/img/carrito.png';" >
     </a>
-   
-    <a class = "active imagen" style="float: right;">
-        <img src= "assets/img/user.png" onmouseover="this.src='assets/img/user-rosa.png';" onmouseout="this.src='assets/img/user.png';">
-    </a>
+   <div *ngIf = 'isAuthenticated'>
+        <a 
+        class = "contenedor" 
+        [routerLink] ="['/user-details', user.displayName]" routerLinkActive = "link-active"
+        style="float: right;"
+        >
+            <img src= "assets/img/user.png" onmouseover="this.src='assets/img/user-rosa.png';" onmouseout="this.src='assets/img/user.png';">
+        </a>
+   </div>
 
+    <div *ngIf = '!isAuthenticated'>
+        <button [routerLink] ="['/login']">
+        LogIn
+        </button>
+    </div>
     
+    <div *ngIf = '!isAuthenticated'>
+        
+    </div>
+
 </div>

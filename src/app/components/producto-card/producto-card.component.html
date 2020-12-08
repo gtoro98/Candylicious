@@ -1,0 +1,22 @@
+<ul>
+    <button class = "botonEliminar"
+     (click) = "deleteProducto(producto.$key)"
+     *ngIf = 'isAuthenticated'
+     >X</button>
+    <li>{{ producto.$key }}</li>
+    <li>
+        <img src= "{{producto.imagen}}" onerror="this.onerror=null;this.src='assets/img/noImage.png';">
+    </li>
+    <li>
+        <a [routerLink] = "['/producto', producto.$key, 'detalles']">
+            {{ producto.nombre }}
+        </a>
+    </li>
+    <li>{{ producto.categoria }}</li>
+    <li>{{ producto.sabor }}</li>
+    <li>{{ producto.precio }}</li>
+    <a class = "botonEditar" 
+    [routerLink] = "['/producto', producto.$key, 'editar']"
+    *ngIf = 'isAuthenticated'
+    > Editar Producto</a>
+</ul>

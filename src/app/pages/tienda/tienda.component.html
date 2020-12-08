@@ -1,16 +1,61 @@
-
-<div class="body">
+<!--
+    <div class="body">
     <p>tienda works!</p>
     <div class= "productoCard" *ngFor="let producto of productos">
-        <ul>
-            <li>{{ producto.$key }}</li>
-            <li>{{ producto.nombre }}</li>
-            <li>{{ producto.categoria }}</li>
-            <li>{{ producto.sabor }}</li>
-            <li>{{ producto.precio }}</li>
-            <a class = "botonEditar" 
-            [routerLink] = "['/producto', producto.$key, 'editar']"> Editar Producto</a>
-        </ul>
+        <app-producto-card 
+        [producto] = 'producto'
+        [isAuthenticated] = 'isAuthenticated'
+        [user] = 'user'
+        ></app-producto-card>   
     </div>
-    <app-button (click)="functioncall($event)" [label] = "label"></app-button>
+    <app-button class = "botonGuardar"  (click)="functioncall($event)" [label] = "label"></app-button>
+-->
+<div id="mySidebar" class="sidebar">
+    <a href="#">Categorias</a>
+    <a href="#">Sabores</a>
+    <a href="#">Metodos de Pago</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" (click)="openNav()">
+        <img class = "imagen"  src="assets/img/icono-rosa.png" >
+    </button>
+  </div>
+<div>
+    <div id="central">
+        <div class="flechas">
+        </div>
+        <div id="contenedor">
+            <div id= "productoCard" *ngFor="let producto of productos">
+                <div class="productoImage">
+                    <img class="productoImage" src={{producto.imagen}} onerror="this.onerror=null;this.src='assets/img/noImage.png';">
+                </div>
+                <div id="datos">
+                    <a class="nombre" [routerLink] = "['/producto',producto.$key, 'detalles']" routerLinkActive = "link-active">
+                        <h2 class="nombre">{{ producto.nombre }}</h2>
+                    </a>
+                    <div id="division">
+                        <h2 id="categoria">{{ producto.categoria }}</h2>
+                        <h2 id="sabor">{{ producto.sabor }}</h2>
+                    </div>
+                    <a class = "botonEditar" [routerLink] = "['/producto', producto.$key, 'editar']" *ngIf = "isAuthenticated && !user.isAdmin"> Agregar al carrito</a>
+                    <a class = "botonEditar" [routerLink] = "['/producto', producto.$key, 'editar']" *ngIf = "isAuthenticated && user.isAdmin"> Editar Producto</a>
+                    <!--<ul>
+                        <li>{{ producto.$key }}</li>
+                        <li>{{ producto.nombre }}</li>
+                        <li>{{ producto.categoria }}</li>
+                        <li>{{ producto.sabor }}</li>
+                        <li>{{ producto.precio }}</li>
+                        <a class = "botonEditar" 
+                        [routerLink] = "['/producto', producto.$key, 'editar']"> Editar Producto</a>
+                    </ul>-->
+                </div>
+            </div>
+        </div>
+        <div class="flechas">
+            
+        </div>
+        <app-button id="boton" (click)="functioncall($event)" [label] = "label" *ngIf = "isAuthenticated && user.isAdmin"></app-button>
+    </div> 
+ 
 </div>

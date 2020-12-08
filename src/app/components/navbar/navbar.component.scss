@@ -1,6 +1,20 @@
+/* Reiniciar valores! */
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
 .navbar {
   background-color: #F1BABF;;
   overflow: hidden;
+  width: 100%;
+  /* Deberia corregir el problema del borde */
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index:100;
+  
 }
 
 /* Style the links inside the navigation bar */
@@ -9,25 +23,43 @@
   display: block;
   color: #FFFFFF;
   text-align: center;
-  padding: 1em 2em;
+  padding: 0.75em 2em;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   height: 100%;
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0em;
+}
 
+.logo {
+  border: 0px;
+  padding: 0em 0em !important;
+  height: 100%;
+  text-align: center;
+}
+.contenedor {
+  border: 0px;
+  padding: 0.6em 1em !important;
+  height: 100%;
+  text-align: center; 
+}
+
+.imagen{
+  float: right;
 }
 
 /* Change the color of links on hover */
 .navbar .link:hover {
-  background-color: #FFFFFF;
-  color: #E57A7F;
+  text-decoration-line: underline;
 }
 
 /* Add an active class to highlight the current page */
-
+.link-active {
+  background-color: #FFFFFF;
+  color: #E57A7F !important;
+}
 
 /* Hide the link that should open and close the topnav on small screens */
 .navbar .icon {
@@ -41,6 +73,7 @@
     display: block;
   }
 }
+
 @media screen and (max-width: 600px) {
   .navbar.responsive {position: relative;}
   .navbar.responsive a.icon {
@@ -48,17 +81,10 @@
     right: 0;
     top: 0;
   }
+
   .navbar.responsive a {
     float: none;
     display: block;
     text-align: center;
   }
 }
-
-.imagen{
-  max-width:100%;
-  max-width: 3em;
-  vertical-align: middle;
-}
-  
-  

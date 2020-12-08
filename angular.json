@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "candylicious"
+    }
+  },
+  "defaultProject": "candylicious",
+  "cli": {
+    "analytics": "064c7e2f-8245-4819-9bdf-b9787a424427"
+  }
 }

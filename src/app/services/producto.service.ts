@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction, DocumentSnapshot } from '@angular/fire/firestore';
+import { AngularFireStorage } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
 import { Action } from 'rxjs/internal/scheduler/Action';
 import { __param } from 'tslib';
@@ -12,7 +13,7 @@ export class ProductoService {
 
   private productoCollection: AngularFirestoreCollection<Producto>;
 
-  constructor(private db: AngularFirestore) {
+  constructor(private db: AngularFirestore, private fireStorage: AngularFireStorage) {
     this.productoCollection = this.db.collection<Producto>('productos');
   }
 
@@ -31,5 +32,9 @@ export class ProductoService {
 
   editarProducto(data: Producto, productoId: string): Promise<void> {
     return this.productoCollection.doc<Producto>(productoId).update(data);
+  }
+
+  deleteProducto(productoId: string): Promise<void> {
+    return this.productoCollection.doc<Producto>(productoId).delete();
   }
 }
