@@ -119,14 +119,24 @@
             height: 10vh;
             text-align: center; 
             .network{
-                width: 100%;
-                height: 100%;
+                width: 5vw;
+                height: 12vh;
             }
         }
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px){
+    #ingresar{
+        width: 15%;
+        height: 10%;
+        p{
+            font-size: 3vw;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
     #container{
         margin-top: 5vw; /*Revisar*/
         #formulario{
@@ -178,6 +188,12 @@
         #networks{
             width: 40%;
             padding: 0vh 3vw;
+            .contenedor {
+                .network{
+                    width: 8vw;
+                    height: 9vh;
+                }
+            }
         }
     }
 }
