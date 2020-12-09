@@ -31,6 +31,10 @@ const routes: Routes = [
     component: TiendaComponent,
   },
   {
+    path: 'tienda',
+    component: TiendaComponent,
+  },
+  {
     path: 'contacto',
     component: ContactoComponent,
   },
