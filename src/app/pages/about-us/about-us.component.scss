@@ -158,39 +158,167 @@ div{
 }
 
 @media screen and (max-width: 600px){
-    h1{
-        top: 20%;
-        font-size: 7vw;
+    #descripcion{
+        width: 100%;
+        height: 100vh;
+        h1{
+        /* Titulo Nosotros*/
+        top: 22vh;
+        left: 50vw;
+        font-size: 8vw;
         }
-    p{
+        p{
+        /* Parrafo Nosotros*/
         font-size: 2.5vw;
+        }
+        #p_1{
+        top: 36%;
+        left: 50%;
+        }
+        #p_2{
+            top: 42%;
+            left: 50%;
+            }
+        #p_3{
+            top: 54%;
+            left: 50%;
+            }
+        #p_4{
+            top: 60%;
+            left: 50%;
+            }
+        #p_5{
+            top: 66%;
+            left: 50%;
+            }
+        #p_6{
+            top: 72%;
+            left: 50%;
+            }
+        #p_7{
+            top: 83%;
+            left: 50%;
+            }
+        #p_8{
+            top: 90%;
+            left: 50%;
+            }
     }
-    #img_5{
-        width: 40vw;
-        height: 50vh;
+
+    #imagenes_2{
+        width: 100%;
+        height: 78vh;
+        #img_5{
+            width: 46vw;
+            height: 50vh;
+            position: absolute;
+            top: 224vh;
+            right: 10vw;
+        }
     }
-    #contenedor1{
-        left: 1vw;
-        top: 286vh;
+
+    #footer{
+        width: 100%;
+        height: 22vh;
+        background-color: #F1BABF;
+        clip-path: polygon(100% 100%, 0 0%, 0 100%);
+        clip-path: #000000;
+        #contenedor1{
+            position: absolute;
+            left: 1vw;
+            top: 281vh;
+            cursor: pointer;
+        }
+        #contenedor2{
+            position: absolute;
+            left: 13vw;
+            top: 282vh;
+            cursor: pointer;
+        }
+        #contenedor3{
+            position: absolute;
+            left: 26vw;
+            top: 282vh;
+            cursor: pointer;
+        }
     }
-    #contenedor2{
-        left: 8vw;
-        top: 287vh;
+}
+
+@media screen and (max-width: 500px){
+    #descripcion{
+        width: 100%;
+        height: 100vh;
+        h1{
+        /* Titulo Nosotros*/
+        top: 18vh;
+        left: 50vw;
+        font-size: 9vw;
+        }
+        p{
+        /* Parrafo Nosotros*/
+        font-size: 2.5vw;
+        }
+        #p_1{
+        top: 30%;
+        left: 50%;
+        }
+        #p_2{
+            top: 36%;
+            left: 50%;
+            }
+        #p_3{
+            top: 48%;
+            left: 50%;
+            }
+        #p_4{
+            top: 54%;
+            left: 50%;
+            }
+        #p_5{
+            top: 60%;
+            left: 50%;
+            }
+        #p_6{
+            top: 66%;
+            left: 50%;
+            }
+        #p_7{
+            top: 77%;
+            left: 50%;
+            }
+        #p_8{
+            top: 82%;
+            left: 50%;
+            }
     }
-    #contenedor3{
-        left: 16vw;
-        top: 287vh;
+
+    #imagenes_2{
+        width: 100%;
+        height: 78vh;
+        #img_5{
+            width: 50vw;
+            height: 50vh;
+            top: 224vh;
+            right: 10vw;
+        }
     }
-    #network1{
-        width: 3vw;
-        height: 9vh;
-    }
-    #network2{
-        width: 3vw;
-        height: 9vh;
-    }
-    #network3{
-        width: 2vw;
-        height: 8vh;
+
+    #footer{
+        width: 100%;
+        height: 22vh;
+        clip-path: #000000;
+        #contenedor1{
+            left: 1vw;
+            top: 285vh;
+        }
+        #contenedor2{
+            left: 16vw;
+            top: 286vh;
+        }
+        #contenedor3{
+            left: 35vw;
+            top: 286vh;
+        }
+    
     }
 }
