@@ -10,6 +10,17 @@
     </div>
     <app-button class = "botonGuardar"  (click)="functioncall($event)" [label] = "label"></app-button>
 -->
+<div id="mySidebar" class="sidebar">
+    <a href="#">Categorias</a>
+    <a href="#">Sabores</a>
+    <a href="#">Metodos de Pago</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" (click)="openNav()">
+        <img class = "imagen"  src="assets/img/icono-rosa.png" >
+    </button>
+  </div>
 <div>
     <div id="central">
         <div class="flechas">
@@ -27,7 +38,8 @@
                         <h2 id="categoria">{{ producto.categoria }}</h2>
                         <h2 id="sabor">{{ producto.sabor }}</h2>
                     </div>
-                    <a class = "botonEditar" [routerLink] = "['/producto', producto.$key, 'editar']" *ngIf = "isAuthenticated"> Editar Producto</a>
+                    <a class = "botonEditar" [routerLink] = "['/producto', producto.$key, 'editar']" *ngIf = "isAuthenticated && !user.isAdmin"> Agregar al carrito</a>
+                    <a class = "botonEditar" [routerLink] = "['/producto', producto.$key, 'editar']" *ngIf = "isAuthenticated && user.isAdmin"> Editar Producto</a>
                     <!--<ul>
                         <li>{{ producto.$key }}</li>
                         <li>{{ producto.nombre }}</li>
@@ -43,7 +55,7 @@
         <div class="flechas">
             
         </div>
-        <app-button id="boton" (click)="functioncall($event)" [label] = "label" *ngIf = "isAuthenticated"></app-button>
+        <app-button id="boton" (click)="functioncall($event)" [label] = "label" *ngIf = "isAuthenticated && user.isAdmin"></app-button>
     </div> 
  
 </div>

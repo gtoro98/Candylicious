@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -26,6 +27,7 @@ import { ProductoDetallesComponent } from './pages/producto-detalles/producto-de
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     TiendaComponent,
     ContactoComponent,
+    InicioComponent,
     CreateProductComponent,
     ButtonComponent,
     ProductoFormComponent,
@@ -41,7 +44,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     ProductoDetallesComponent,
     UserDetailsComponent,
-    SignupComponent
+    SignupComponent,
+    RecuContraComponent
   ],
   imports: [
     BrowserModule,

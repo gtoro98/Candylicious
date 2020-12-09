@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminGuard } from './guards/admin.guard';
 import { AuthGuard } from './guards/auth.guard';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
@@ -11,6 +12,7 @@ import { ProductoDetallesComponent } from './pages/producto-detalles/producto-de
 import { SignupComponent } from './pages/signup/signup.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
 
 const routes: Routes = [
   {
@@ -30,17 +32,21 @@ const routes: Routes = [
     component: TiendaComponent,
   },
   {
+    path: 'tienda',
+    component: TiendaComponent,
+  },
+  {
     path: 'contacto',
     component: ContactoComponent,
   },
   {
     path: 'create-product',
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard, AdminGuard],
     component: CreateProductComponent,
   },
   {
     path: 'producto/:productoId/editar',
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard, AdminGuard],
     component: EditarProductoComponent,
   },
   {
@@ -59,6 +65,10 @@ const routes: Routes = [
     path: 'user-details/:userId',
     canActivate: [AuthGuard],
     component: UserDetailsComponent,
+  },
+  {
+    path: 'contrasena',
+    component: RecuContraComponent,
   },
   
 
