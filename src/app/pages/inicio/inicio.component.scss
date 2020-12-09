@@ -172,3 +172,187 @@ h1{
     height: 11vh;
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px){
+    h1{
+        top: 30vh;
+        left: 28vw;
+        font-size: 7vw;
+    }
+    #p_1{
+        font-size: 3.5vw;
+        top: 44vh;
+        left: 28vw;
+    }
+    #p_2{
+        font-size: 3.5vw;
+        top: 53vh;
+        left: 28vw;
+    }
+
+    #boton_1{
+        width: 15vw;
+        height: 10vh;
+        border: 0.1vw solid #FFFFFF;
+        border-radius: 2vw;
+        top: 47vw;
+        left: 34vw;
+        cursor: pointer;
+        p{
+            top: 1.5vw;
+            font-size: 3vw;
+        }
+    }
+
+    #img_3{
+        width: 45vw;
+        height: 70vh;
+        top: 8vh;
+        right: 0vw;
+    }
+    #img_2{
+        width: 45vw;
+        height: 70vh;
+        top: 8vh;
+        right: 0vw;
+    }
+    #img_1{
+        width: 45vw;
+        height: 70vh;
+        top: 8vh;
+        right: 0vw;
+    }
+
+    #cuadro_botones{
+        width: 22vw;
+        height: 9vh;
+        top: 65vh;
+        left: 55vw;
+    }
+    
+    #boton_carrusel_1{
+        width: 2.5vw;
+        height: 2.5vw;
+        top: 1.5vw;
+        left: 2.5vw;
+    }
+    
+    #boton_carrusel_2{
+        width: 2.5vw;
+        height: 2.5vw;
+        top: 1.5vw;
+        left: 7vw;
+    }
+    
+    #boton_carrusel_3{
+        width: 2.5vw;
+        height: 2.5vw;
+        top: 1.5vw;
+        left: 12vw;
+    }
+
+    #contenedor1{
+        left: 10vw;
+        top: 80vh;
+    }
+    #contenedor2{
+        left: 44vw;
+        top: 80vh;
+    }
+    #contenedor3{
+        left: 80vw;
+        top: 80vh;
+    }
+}
+
+@media screen and (max-width: 500px){
+    h1{
+        top: 20vh;
+        left: 28vw;
+        font-size: 7vw;
+    }
+    #p_1{
+        font-size: 3.5vw;
+        top: 30vh;
+        left: 28vw;
+    }
+    #p_2{
+        font-size: 3.5vw;
+        top: 36vh;
+        left: 28vw;
+    }
+
+    #boton_1{
+        width: 15vw;
+        height: 6vh;
+        border: 0.1vw solid #FFFFFF;
+        border-radius: 2vw;
+        top: 58vw;
+        left: 32vw;
+        cursor: pointer;
+        p{
+            top: 1.5vw;
+            font-size: 3vw;
+        }
+    }
+
+    #img_3{
+        width: 45vw;
+        height: 50vh;
+        top: 8vh;
+        right: 0vw;
+    }
+    #img_2{
+        width: 45vw;
+        height: 50vh;
+        top: 8vh;
+        right: 0vw;
+    }
+    #img_1{
+        width: 45vw;
+        height: 50vh;
+        top: 8vh;
+        right: 0vw;
+    }
+
+    #cuadro_botones{
+        width: 22vw;
+        height: 7vh;
+        top: 49vh;
+        left: 55vw;
+    }
+    
+    #boton_carrusel_1{
+        width: 2.5vw;
+        height: 2.5vw;
+        top: 1.5vw;
+        left: 2.5vw;
+    }
+    
+    #boton_carrusel_2{
+        width: 2.5vw;
+        height: 2.5vw;
+        top: 1.5vw;
+        left: 7vw;
+    }
+    
+    #boton_carrusel_3{
+        width: 2.5vw;
+        height: 2.5vw;
+        top: 1.5vw;
+        left: 12vw;
+    }
+
+    #contenedor1{
+        left: 10vw;
+        top: 80vh;
+    }
+    #contenedor2{
+        left: 44vw;
+        top: 80vh;
+    }
+    #contenedor3{
+        left: 80vw;
+        top: 80vh;
+    }
+}
