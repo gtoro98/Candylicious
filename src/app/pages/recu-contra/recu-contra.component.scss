@@ -1,0 +1,293 @@
+*{
+    margin: 0% !important;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: auto;
+    width: 50%;
+}
+.form{
+    
+    padding: 2em;
+    position: relative;
+}
+
+input{
+
+    border: 3px solid #EFB0B6;
+    box-sizing: border-box;
+    padding: 1em 1em;
+    border-radius: 10px;
+    width: 171px;
+    height: 48px;
+}
+
+.text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2em;
+    line-height: 1em;
+    color: rgba(217, 62, 70, 0.69);
+}
+
+.sub-title{
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8vh;
+    color:  #E57A7F;
+    top: 14vh;
+    left: 30vw;
+}
+
+#texto_1{
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 4vh;
+    color:  rgba(239, 174, 180, 1);
+    top: 27vh;
+    left: 30vw;  
+}
+
+#texto_2{
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 4vh;
+    color:  rgba(239, 174, 180, 1);
+    top: 60vh;
+    left: 30vw;  
+}
+
+#piso_0{
+    position: absolute;
+    top: 50vh;
+    left: 30vw;
+    width: 35vw;
+    height: 0.4vh;
+    background-color: #da868abb;
+}
+
+#email{
+    position: absolute;
+    top: 44vh;
+    left: 30vw;
+    border: 0;
+    width: 35vw;
+    height: 5vh;
+    font-size: 3vh;
+}
+
+#boton_recuperar{
+    width: 12vw;
+    height: 8vh;
+    background: #D42C32;
+    border: 0.1vw solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2vw;
+    position: absolute;
+    top: 75vh;
+    left: 58vw;
+    cursor: pointer;
+    p{
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 1.5vw;
+    }
+}
+
+#footer{
+    position: absolute;
+    top: 78vh;
+    width: 100%;
+    height: 22vh;
+    background-color: #F1BABF;
+    clip-path: polygon(100% 100%, 0 0%, 0 100%);
+    clip-path: #000000;
+    #contenedor1{
+        position: absolute;
+        left: 1vw;
+        bottom: 1vh;
+    }
+    #contenedor2{
+        position: absolute;
+        left: 8vw;
+        bottom: 1vh;
+    }
+    #contenedor3{
+        position: absolute;
+        left: 16vw;
+        bottom: 1.5vh;
+        cursor: pointer;
+    }
+
+    #network1{
+        width: 5vw;
+        height: 12.5vh;
+        cursor: pointer;
+    }
+    #network2{
+        width: 5vw;
+        height: 12.5vh;
+        cursor: pointer;
+    }
+    #network3{
+        width: 4vw;
+        height: 11vh;
+        cursor: pointer;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .sub-title{
+        left: 34vw;
+    }
+
+    #texto_1{
+        left: 18vw;  
+    }
+
+    #email{
+        font-size: 3vh;
+    }
+
+    #boton_recuperar{
+        width: 20vw;
+        height: 8vh;
+        left: 68vw;
+        p{
+            font-size: 2.3vw;
+        }
+    }
+
+    #footer{
+        #contenedor1{
+            position: absolute;
+            left: 2vw;
+            bottom: 1.2vh;
+        }
+        #contenedor2{
+            position: absolute;
+            left: 14vw;
+            bottom: 1vh;
+        }
+        #contenedor3{
+            position: absolute;
+            left: 26vw;
+            bottom: 1.5vh;
+        }
+    
+        #network1{
+            width: 10vw;
+            height: 12.5vh;
+        }
+        #network2{
+            width: 10vw;
+            height: 12.5vh;
+        }
+        #network3{
+            width: 10vw;
+            height: 11vh;
+        }
+    
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .sub-title{
+        font-weight: 700;
+        font-size: 7vh;
+        top: 14vh;
+        left: 28vw;
+    }
+
+    #texto_1{
+        position: absolute;
+        justify-content: center;
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-size: 3vh;
+        color:  rgba(239, 174, 180, 1);
+        top: 25vh;
+        left: 13vw;  
+    }
+    
+    #piso_0{
+        position: absolute;
+        top: 37vh;
+        left: 20vw;
+        width: 57vw;
+        height: 0.4vh;
+        background-color: #da868abb;
+    }
+
+    #email{
+        position: absolute;
+        top: 39vh;
+        border: 0;
+        left: 20vw;
+        width: 57vw;
+        height: 5vh;
+        font-size: 2.5vh;
+    }
+
+    #boton_recuperar{
+        width: 22vw;
+        height: 8vh;
+        left: 65vw;
+        p{
+            font-size: 3vw;
+        }
+    }
+    
+    #footer{
+        #contenedor1{
+            position: absolute;
+            left: 2vw;
+            bottom: 1.2vh;
+        }
+        #contenedor2{
+            position: absolute;
+            left: 14vw;
+            bottom: 1vh;
+        }
+        #contenedor3{
+            position: absolute;
+            left: 26vw;
+            bottom: 1.5vh;
+            cursor: pointer;
+        }
+    
+        #network1{
+            width: 10vw;
+            height: 12.5vh;
+            cursor: pointer;
+        }
+        #network2{
+            width: 10vw;
+            height: 12.5vh;
+            cursor: pointer;
+        }
+        #network3{
+            width: 10vw;
+            height: 11vh;
+            cursor: pointer;
+        }
+    
+    }
+}
