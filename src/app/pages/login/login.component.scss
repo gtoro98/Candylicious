@@ -6,7 +6,7 @@
 
 #container{
     width: 100%;
-    height: 78%;
+    height: 78vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,7 +102,7 @@
 
 #footer{
     width: 100%;
-    height: 22%;
+    height: 22vh;
     background-color: #F1BABF;
     clip-path: polygon(100% 100%, 0 0%, 0 100%);
     #networks{
