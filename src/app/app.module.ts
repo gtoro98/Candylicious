@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -33,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     TiendaComponent,
     ContactoComponent,
+    InicioComponent,
     CreateProductComponent,
     ButtonComponent,
     ProductoFormComponent,
