@@ -47,7 +47,74 @@ div{
                 color: white;
             }
         }
+
+        #datos{
+            position: absolute;
+            top: 123vh;
+            left: 10vw;
+            form{
+                #nombre{
+                    position: absolute;
+                    top: 0vh;
+                    font-size: 1vw;
+                    width: 25vw;
+                    height: 4vh;
+                    border-color: rgba(255, 127, 159, 0.658);
+                    outline: 0 none;
+                    border-top-color: rgba(255, 255, 255, 0);
+                    border-left-color: rgba(255, 255, 255, 0);
+                    border-right-color: rgba(255, 255, 255, 0);
+                }
+                #correo{
+                    position: absolute;
+                    top: 7vh;
+                    font-size: 1vw;
+                    width: 25vw;
+                    height: 4vh;
+                    border-color: rgba(255, 127, 159, 0.658);
+                    outline: 0 none;
+                    border-top-color: rgba(255, 255, 255, 0);
+                    border-left-color: rgba(255, 255, 255, 0);
+                    border-right-color: rgba(255, 255, 255, 0);
+                }
+
+                #mensaje{
+                    position: absolute;
+                    top: 14vh;
+                    font-size: 1vw;
+                    width: 25vw;
+                    height: 15vh;
+                    border-color: rgba(255, 127, 159, 0.658);
+                    outline: 0 none;
+                    border-top-color: rgba(255, 255, 255, 0);
+                    border-left-color: rgba(255, 255, 255, 0);
+                    border-right-color: rgba(255, 255, 255, 0);
+                }
+
+                button{
+                    width: 8vw;
+                    height: 7vh;
+                    background: #D42C32;
+                    border: 0.1vw solid #FFFFFF;
+                    box-sizing: border-box;
+                    border-radius: 2vw;
+                    position: absolute;
+                    text-decoration: none;
+                    top: 34vh;
+                    left: 18vw;
+                    cursor: pointer;
+                    p{
+                        position: relative;
+                        top: 0vw;
+                        text-align: center;
+                        color: white;
+                        font-size: 1.5vw;
+                    }
+                }
+            }
+        }
     }
+
     #mapa{
         width: 55%;
         height: 70vh;
