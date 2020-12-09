@@ -66,6 +66,7 @@ div{
             .iconos{
                 width: 7vw;
                 height: 10vh;
+                cursor: pointer;
             }
         }
     }
@@ -79,8 +80,8 @@ div{
     clip-path: #000000;
     #networks{
         position: absolute;
-        top: 180%;
-        left: 1%;
+        top: 177vh;
+        left: 0vw;
         width: 30%;
         display: flex;
         justify-content: space-around;
@@ -92,8 +93,8 @@ div{
             height: 10vh;
             text-align: center; 
             .network{
-                width: 100%;
-                height: 100%;
+                width: 6vw;
+                height: 13vh;
             }
         }
     }
