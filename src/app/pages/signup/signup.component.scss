@@ -249,3 +249,259 @@ input{
     }
 
 }
+
+@media screen and (max-width: 600px) {
+    .sub-title{
+        left: 34vw;
+    }
+
+    #texto_1{
+        left: 18vw;  
+    }
+
+    #link_1{
+        left: 58vw;
+    }
+
+    #nombre{
+        font-size: 3vh;
+    }
+    #email{
+        font-size: 3vh;
+    }
+    #contrasena{
+        font-size: 3vh;
+    }
+    #telefono{
+        font-size: 3vh;
+    }
+    #direccion{
+        font-size: 3vh;
+    }
+
+    #boton_registrarse{
+        width: 20vw;
+        height: 8vh;
+        left: 68vw;
+        p{
+            font-size: 2.3vw;
+        }
+    }
+
+    #footer{
+        #contenedor1{
+            position: absolute;
+            left: 2vw;
+            bottom: 1.2vh;
+        }
+        #contenedor2{
+            position: absolute;
+            left: 14vw;
+            bottom: 1vh;
+        }
+        #contenedor3{
+            position: absolute;
+            left: 26vw;
+            bottom: 1.5vh;
+        }
+    
+        #network1{
+            width: 10vw;
+            height: 12.5vh;
+        }
+        #network2{
+            width: 10vw;
+            height: 12.5vh;
+        }
+        #network3{
+            width: 10vw;
+            height: 11vh;
+        }
+    
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .sub-title{
+        font-weight: 700;
+        font-size: 7vh;
+        top: 14vh;
+        left: 28vw;
+    }
+
+    #texto_1{
+        position: absolute;
+        justify-content: center;
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-size: 3vh;
+        color:  rgba(239, 174, 180, 1);
+        top: 25vh;
+        left: 13vw;  
+    }
+    
+    #link_1{
+        position: absolute;
+        justify-content: center;
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-size: 3vh;
+        color:   #E57A7F;
+        top: 25vh;
+        left: 66vw;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    
+    #nombre{
+        position: absolute;
+        top: 32vh;
+        border: 0;
+        left: 20vw;
+        width: 57vw;
+        height: 5vh;
+        font-size: 2.5vh;
+    }
+    
+    #piso_0{
+        position: absolute;
+        top: 37vh;
+        left: 20vw;
+        width: 57vw;
+        height: 0.4vh;
+        background-color: #da868abb;
+    }
+    
+
+    #email{
+        position: absolute;
+        top: 39vh;
+        border: 0;
+        left: 20vw;
+        width: 57vw;
+        height: 5vh;
+        font-size: 2.5vh;
+    }
+    
+    #piso_1{
+        position: absolute;
+        top: 44vh;
+        left: 20vw;
+        width: 57vw;
+        height: 0.4vh;
+        background-color: #da868abb;
+    }
+    
+    #contrasena{
+        position: absolute;
+        top: 47vh;
+        border: 0;
+        left: 20vw;
+        width: 57vw;
+        height: 5vh;
+        font-size: 2.5vh;
+    }
+    
+    #piso_2{
+        position: absolute;
+        top: 52vh;
+        left: 20vw;
+        width: 57vw;
+        height: 0.4vh;
+        background-color: #da868abb;
+    }
+    
+    #telefono{
+        position: absolute;
+        top: 56vh;
+        border: 0;
+        left: 20vw;
+        width: 57vw;
+        height: 5vh;
+        font-size: 2.5vh;
+    }
+    
+    #piso_3{
+        position: absolute;
+        top: 61vh;
+        left: 20vw;
+        width: 57vw;
+        height: 0.4vh;
+        background-color: #da868abb;
+    }
+
+    #direccion{
+        position: absolute;
+        top: 65vh;
+        left: 20vw;
+        border: 0;
+        width: 57vw;
+        height: 5vh;
+        font-size: 2.5vh;
+    }
+    
+    #piso_4{
+        position: absolute;
+        top: 70vh;
+        left: 20vw;
+        width: 57vw;
+        height: 0.4vh;
+        background-color: #da868abb;
+    }
+
+    #boton_registrarse{
+        width: 22vw;
+        height: 8vh;
+        left: 65vw;
+        p{
+            font-size: 3vw;
+        }
+    }
+
+    #boton_google{
+        width: 13vw;
+        height: 6vh;
+        border: 0;
+        top: 72vh;
+        left: 60vw;
+    }
+    
+    #footer{
+        #contenedor1{
+            position: absolute;
+            left: 2vw;
+            bottom: 1.2vh;
+        }
+        #contenedor2{
+            position: absolute;
+            left: 14vw;
+            bottom: 1vh;
+        }
+        #contenedor3{
+            position: absolute;
+            left: 26vw;
+            bottom: 1.5vh;
+            cursor: pointer;
+        }
+    
+        #network1{
+            width: 10vw;
+            height: 12.5vh;
+            cursor: pointer;
+        }
+        #network2{
+            width: 10vw;
+            height: 12.5vh;
+            cursor: pointer;
+        }
+        #network3{
+            width: 10vw;
+            height: 11vh;
+            cursor: pointer;
+        }
+    
+    }
+}
