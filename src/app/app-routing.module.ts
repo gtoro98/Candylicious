@@ -14,6 +14,9 @@ import { TiendaComponent } from './pages/tienda/tienda.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
+import { ComprarComponent } from './pages/comprar/comprar.component';
+import { Comprar2Component } from './pages/comprar2/comprar2.component';
+import { Comprar3Component } from './pages/comprar3/comprar3.component';
 
 const routes: Routes = [
   {
@@ -76,7 +79,18 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     component: CarritoComponent,
   },
-  
+  {
+    path: 'comprar',
+    component: ComprarComponent,
+  },
+  {
+    path: 'comprar2',
+    component: Comprar2Component,
+  },
+  {
+    path: 'comprar3',
+    component: Comprar3Component,
+  },
 
 ];
 

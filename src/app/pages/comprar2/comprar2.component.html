@@ -1,0 +1,50 @@
+<div id="metodo_pago">
+    <div id="titulo">
+        <h1><strong>Método de pago</strong></h1>
+    </div>
+    <form>
+        <select name="Método de pago" id="metodo">
+            <option>Transferencia</option>
+            <option>En Tienda</option>
+            <option>Paypal</option>
+        </select>
+
+        <input 
+            type="text"
+            formControlName = "direccion"
+            placeholder="Dirección"
+            id="direccion"
+        >
+
+        <input 
+            type="text"
+            formControlName = "codigo"
+            placeholder="Código postal"
+            id="codigo"
+        >
+
+        <input 
+            type="text"
+            formControlName = "telefono"
+            placeholder="Telefono"
+            id="telefono"
+        >
+
+        <a style="text-decoration:none" [routerLink] ="['/comprar3']" id="boton_siguiente"><p><strong>Realizar pedido</strong></p></a>
+    </form>
+    <p id="p_info">
+        Después de realizada su compra, nos comunicaremos con
+    </p>
+    <p id="p_info2">
+        usted para proporcionarle los datos de la transferencia.
+    </p>
+    <p id="p_info3">
+        Dirección: Caracas.
+    </p>
+    <p id="p_info4">
+        ¡No te preocupes si te sale el costo del envio!  Si pagas en nuestra tienda
+    </p>
+    <p id="p_info5">
+        no se cobrara.
+    </p>
+</div>
