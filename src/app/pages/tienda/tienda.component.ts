@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'firebase';
+import { Mensaje } from 'src/app/models/mensaje';
 import { Producto } from 'src/app/models/producto';
 import { UserDetails } from 'src/app/models/user-details';
 import { AuthService } from 'src/app/services/auth.service';
+import { MensajeService } from 'src/app/services/mensaje.service';
 import { ProductoService } from 'src/app/services/producto.service';
 
 @Component({
@@ -14,6 +16,7 @@ import { ProductoService } from 'src/app/services/producto.service';
 export class TiendaComponent implements OnInit {
 
   productos: Array<Producto> = [];
+  mensajes: Array<Mensaje> = [];
   label = "Agregar";
 
   isAuthenticated = false;
@@ -23,6 +26,7 @@ export class TiendaComponent implements OnInit {
 
   constructor( 
     private productoService: ProductoService, 
+    private mensajeService: MensajeService,
     private router: Router,
     private authService: AuthService,
     ) { }
@@ -30,6 +34,7 @@ export class TiendaComponent implements OnInit {
   ngOnInit(): void {
     this.getCurrentUser();
     this.getAllProductos();
+    this.getAllMensajes();
   }
 
   getAllProductos(): void {
@@ -42,6 +47,17 @@ export class TiendaComponent implements OnInit {
       );
       
     });
+}
+getAllMensajes(): void {
+  this.mensajeService.getAllMensajes().subscribe((items) => {
+    this.mensajes = items.map(
+      (item) => ({
+        ...item.payload.doc.data(),
+        $key: item.payload.doc.id,
+      }as Mensaje)
+    );
+    console.log(this.mensajes)
+  });
 }
 
   functioncall(e: MouseEvent) {

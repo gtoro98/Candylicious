@@ -10,13 +10,13 @@
             </div>
 
             <div id="datos">
-                <form autocomplete="on">
-                    <input placeholder="Nombre" type="text" id="nombre" name="nombre" title="Por favor escribe tu nombre" required> <br>
+                <form autocomplete="on" [formGroup] = "mensajeForm" (ngSubmit) = "nuevoMensaje">
+                    <input placeholder="Nombre" formControlName = "nombre" type="text" id="nombre" name="nombre" title="Por favor escribe tu nombre" required> <br>
                     
                     <input placeholder="Correo electronico" type="email" id="correo" name="correo" title="Por favor ingresa tu correo" required> <br>
 
-                    <textarea placeholder="Mensaje" id="mensaje" name="mensaje" rows="10" cols="30" title="Por favor ingresa tu mensaje, nos importa tu opinion" required></textarea><br>
-                    <button  id="boton_enviar"><p><strong>Enviar</strong></p></button>
+                    <textarea placeholder="Mensaje" formControlName = "mensaje" id="mensaje" name="mensaje" rows="10" cols="30" title="Por favor ingresa tu mensaje, nos importa tu opinion" required></textarea><br>
+                    <button  id="boton_enviar" (click) = "nuevoMensaje()"><p><strong>Enviar</strong></p></button>
                 </form>
             </div>
 

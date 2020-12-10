@@ -43,7 +43,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     ProductoDetallesComponent,
     UserDetailsComponent,
-    SignupComponent
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
