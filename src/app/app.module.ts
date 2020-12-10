@@ -28,7 +28,8 @@ import { UserDetailsComponent } from './pages/user-details/user-details.componen
 import { SignupComponent } from './pages/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
-import { CarritoComponent } from './pages/carrito/carrito.component'
+import { CarritoComponent } from './pages/carrito/carrito.component';
+import { ComprarComponent } from './pages/comprar/comprar.component'
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { CarritoComponent } from './pages/carrito/carrito.component'
     SignupComponent,
     RecuContraComponent,
     CarritoComponent,
+    ComprarComponent,
   ],
   imports: [
     BrowserModule,

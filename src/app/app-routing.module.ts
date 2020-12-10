@@ -14,6 +14,7 @@ import { TiendaComponent } from './pages/tienda/tienda.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
+import { ComprarComponent } from './pages/comprar/comprar.component';
 
 const routes: Routes = [
   {
@@ -75,6 +76,10 @@ const routes: Routes = [
     path: 'carrito/:userId',
     canActivate: [AuthGuard],
     component: CarritoComponent,
+  },
+  {
+    path: 'comprar',
+    component: ComprarComponent,
   },
   
 

@@ -112,5 +112,26 @@
         clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
         cursor: pointer;
     }
+
+    #boton_comprar{
+        width: 10vw;
+        height: 8vh;
+        background: #D42C32;
+        border: 0.1vw solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 2vw;
+        position: absolute;
+        top: 20vh;
+        left: 85vw;
+        cursor: pointer;
+        p{
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            top: 2vh;
+            color: white;
+            font-size: 1.2vw;
+        }
+    }
 }
 
