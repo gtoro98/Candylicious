@@ -31,6 +31,7 @@
 <div>
     <div id="central">
         <div class="flechas">
+            <div id="der"></div>
         </div>
         <div id="contenedor">
             <div id= "productoCard" *ngFor="let producto of productos">
@@ -38,6 +39,10 @@
                     <img class="productoImage" src={{producto.imagen}} onerror="this.onerror=null;this.src='assets/img/noImage.png';">
                 </div>
                 <div id="datos">
+                    <button class = "botonEliminar"
+                    (click) = "deleteProducto(producto.$key)"
+                    *ngIf = 'isAuthenticated'
+                    >X</button>
                     <a class="nombre" [routerLink] = "['/producto',producto.$key, 'detalles']" routerLinkActive = "link-active">
                         <h2 class="nombre">{{ producto.nombre }}</h2>
                     </a>
@@ -45,7 +50,7 @@
                         <h2 id="categoria">{{ producto.categoria }}</h2>
                         <h2 id="sabor">{{ producto.sabor }}</h2>
                     </div>
-                    <button class = "botonEditar" (click) = "agregarProducto(producto.$key)" *ngIf = "isAuthenticated"> Agregar al carrito</button>
+                    <button class = "botonEditar" (click) = "agregarProducto(producto.$key)" *ngIf = "isAuthenticated && !user.isAdmin"> Agregar al carrito</button>
                     <a class = "botonEditar" [routerLink] = "['/producto', producto.$key, 'editar']" *ngIf = "isAuthenticated && user.isAdmin"> Editar Producto</a>
                     <!--<ul>
                         <li>{{ producto.$key }}</li>
@@ -60,7 +65,7 @@
             </div>
         </div>
         <div class="flechas">
-            
+            <div id="izq"></div>
         </div>
         <app-button id="boton" (click)="functioncall($event)" [label] = "label" *ngIf = "isAuthenticated && user.isAdmin"></app-button>
     </div> 

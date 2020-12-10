@@ -1,22 +1,30 @@
-<ul>
-    <button class = "botonEliminar"
-     (click) = "deleteProducto(producto.$key)"
-     *ngIf = 'isAuthenticated'
-     >X</button>
-    <li>{{ producto.$key }}</li>
-    <li>
-        <img src= "{{producto.imagen}}" onerror="this.onerror=null;this.src='assets/img/noImage.png';">
-    </li>
-    <li>
-        <a [routerLink] = "['/producto', producto.$key, 'detalles']">
-            {{ producto.nombre }}
-        </a>
-    </li>
-    <li>{{ producto.categoria }}</li>
-    <li>{{ producto.sabor }}</li>
-    <li>{{ producto.precio }}</li>
-    <a class = "botonEditar" 
-    [routerLink] = "['/producto', producto.$key, 'editar']"
-    *ngIf = 'isAuthenticated'
-    > Editar Producto</a>
-</ul>
+<div id="body">
+    <div id="borde">
+        <div id="resto">
+            <img src= "{{producto.imagen}}" onerror="this.onerror=null;this.src='assets/img/noImage.png';">  
+            <div id="detalles">
+                <div id="titulos">
+                    <div id="titulo_1" class="info"><p><strong>Nombre:</strong></p></div>
+                    <div id="titulo_2"class="info"><p><strong>Sabor:</strong></p></div>
+                    <div id="titulo_3" class="info"><p><strong>Categoría:</strong></p></div>
+                    <div id="titulo_4" class="info"><p><strong>Precio:</strong></p></div>
+                    <div id="titulo_5" class="info"><p><strong>Marca:</strong></p></div>
+                </div>
+                <div id="datos">
+                    <div id="titulo_1_a" class="info">{{ producto.nombre }}</div>
+                    <div id="titulo_2_a" class="info">{{ producto.sabor }}</div>
+                    <div id="titulo_3_a" class="info">{{ producto.categoria }}</div>
+                    <div id="titulo_4_a" class="info">{{ producto.precio }}</div>
+                    <div id="titulo_5_a" class="info">{{ producto.marca }}</div>
+                </div>
+            </div>
+        </div>
+        <div id="desc">
+            <div id="titulo_des" class="info">{{ producto.descripcion }}</div>
+        </div>
+        <a class = "botonEditar" 
+        [routerLink] = "['/producto', producto.$key, 'editar']"
+        *ngIf = 'isAuthenticated'
+        > Editar Producto</a>
+    </div>
+</div>

@@ -1,3 +1,145 @@
+/* Reiniciar valores! */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#body{
+    width: 100%;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #borde{
+        width: 50%;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        #resto{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            img{
+                top: 26vh;
+                width: 300px;
+                height: 300px;
+                border-radius: 50px;
+                border: 2px solid;
+                border-color: rgba(217, 62, 70, 0.69);
+                position: absolute;
+                left: 20vw;
+            }
+            #detalles{
+                display: flex;
+                justify-content: space-around;
+                #titulos{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-end;
+                    #titulo_1{
+                        position: absolute;
+                        top: 35vh;
+                        left: 50vw;
+                    }
+                    #titulo_2{
+                        position: absolute;
+                        top: 42vh;
+                        left: 50vw;
+                    }
+                    #titulo_3{
+                        position: absolute;
+                        top: 49vh;
+                        left: 50vw;
+                    }
+                    #titulo_4{
+                        position: absolute;
+                        top: 56vh;
+                        left: 50vw;
+                    }
+                    #titulo_5{
+                        position: absolute;
+                        top: 63vh;
+                        left: 50vw;
+                    }
+                    .info{
+                        text-align: right;
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 2em;
+                        line-height: 1em;
+                        color: rgba(218, 25, 25, 0.92);
+                    } 
+                }
+                #datos{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    #titulo_1_a{
+                        position: absolute;
+                        top: 35.5vh;
+                        left: 62vw;
+                    }
+                    #titulo_2_a{
+                        position: absolute;
+                        top: 42.5vh;
+                        left: 62vw;
+                    }
+                    #titulo_3_a{
+                        position: absolute;
+                        top: 49.5vh;
+                        left: 62vw;
+                    }
+                    #titulo_4_a{
+                        position: absolute;
+                        top: 56.5vh;
+                        left: 62vw;
+                    }
+                    #titulo_5_a{
+                        position: absolute;
+                        top: 63.5vh;
+                        left: 62vw;
+                    }
+                    .info{
+                        text-align: right;
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 1.8em;
+                        line-height: 1em;
+                        color: rgba(217, 62, 70, 0.69);
+                    }
+                }
+            }
+        }
+        #desc{
+            width: 100%;
+            height: 30%;
+            text-align: right;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 2em;
+            line-height: 1em;
+            color: rgba(217, 62, 70, 0.69);
+            #titulo_des{
+                    position: absolute;
+                    top: 75.5vh;
+                    left: 50vw;
+            }
+        }
+    }
+}
+
 .botonEliminar{
     position: absolute;
     top: 1em;

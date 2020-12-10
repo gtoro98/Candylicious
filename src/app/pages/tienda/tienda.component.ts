@@ -93,7 +93,7 @@ getCurrentUser(): void{
 }
 
 async escogerBolsa(){
-  console.log(document.getElementById("select_bolsa").textContent)
+
   if(document.getElementById("select_bolsa").textContent == "Nueva Bolsa"){
 
     const nuevaBolsa: Bolsa = {
