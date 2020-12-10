@@ -27,11 +27,14 @@
             justify-content: center;
             align-items: center;
             img{
-                width: 280px;
-                height: 180px;
+                top: 26vh;
+                width: 300px;
+                height: 300px;
                 border-radius: 50px;
                 border: 2px solid;
                 border-color: rgba(217, 62, 70, 0.69);
+                position: absolute;
+                left: 20vw;
             }
             #detalles{
                 display: flex;
@@ -41,6 +44,31 @@
                     flex-direction: column;
                     justify-content: space-around;
                     align-items: flex-end;
+                    #titulo_1{
+                        position: absolute;
+                        top: 35vh;
+                        left: 50vw;
+                    }
+                    #titulo_2{
+                        position: absolute;
+                        top: 42vh;
+                        left: 50vw;
+                    }
+                    #titulo_3{
+                        position: absolute;
+                        top: 49vh;
+                        left: 50vw;
+                    }
+                    #titulo_4{
+                        position: absolute;
+                        top: 56vh;
+                        left: 50vw;
+                    }
+                    #titulo_5{
+                        position: absolute;
+                        top: 63vh;
+                        left: 50vw;
+                    }
                     .info{
                         text-align: right;
                         font-family: Roboto;
@@ -56,6 +84,31 @@
                     flex-direction: column;
                     justify-content: space-around;
                     align-items: flex-start;
+                    #titulo_1_a{
+                        position: absolute;
+                        top: 35.5vh;
+                        left: 62vw;
+                    }
+                    #titulo_2_a{
+                        position: absolute;
+                        top: 42.5vh;
+                        left: 62vw;
+                    }
+                    #titulo_3_a{
+                        position: absolute;
+                        top: 49.5vh;
+                        left: 62vw;
+                    }
+                    #titulo_4_a{
+                        position: absolute;
+                        top: 56.5vh;
+                        left: 62vw;
+                    }
+                    #titulo_5_a{
+                        position: absolute;
+                        top: 63.5vh;
+                        left: 62vw;
+                    }
                     .info{
                         text-align: right;
                         font-family: Roboto;
@@ -78,6 +131,11 @@
             font-size: 2em;
             line-height: 1em;
             color: rgba(217, 62, 70, 0.69);
+            #titulo_des{
+                    position: absolute;
+                    top: 75.5vh;
+                    left: 50vw;
+            }
         }
     }
 }
