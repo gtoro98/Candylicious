@@ -1,83 +1,79 @@
-
-<div class = "container">
-    <form [formGroup] = "productoForm" (ngSubmit) = "onSubmit">
-
-        <input type="file" name="file" (input)="onFileChanged($event)" accept=".jpeg,.jpg,.png,.svg" />
-        <br />
-       
-        <img [src]="downloadableURL"  onerror="this.onerror=null;this.src='assets/img/noImage.png';"  width="425px" height="300px"/>
-        
-        <br />
-      
-      <!-- Progress Bar -->
-      
-        <div *ngIf="progressValue | async as val">
-          <progress type="warning"  [value]="val" style="height: 7mm; width: 50%" max="100" ></progress>
-          <br />
-            <span *ngIf="val<100" style="color:rgb(255, 60, 0); font-size: 17px; font-weight: 410;">{{ val | number}}% </span><span *ngIf="val == 100" style="color:rgb(1, 153, 34);  font-size: 17px; font-weight: 410;">Completed !</span>
-        </div>
-
-        <div id = "sub-title">
-            <label class = "sub-title" for="nombre">Nombre:</label>
-            <input 
-            type="text"
-            formControlName = "nombre"
-            placeholder="Introduzca el nombre"
-            id="nombre"
-            required>
+<div id = "body">
+    <form id="formulario" [formGroup] = "productoForm" (ngSubmit) = "onSubmit">
+        <div id = "resto">
+            <div id="imagen">
+                <img id="foto" [src]="downloadableURL"  onerror="this.onerror=null;this.src='assets/img/noImage.png';"  width="385px" height="240px"/>
+                <input type="file" name="file" (input)="onFileChanged($event)" accept=".jpeg,.jpg,.png,.svg" />
+    
+                <!-- Progress Bar -->
             
-        </div>
-        <div>
-            <label class= "text" for="sabor">Sabor:</label>
-            <input 
-            type="text"
-            formControlName = "sabor"
-            placeholder="Introduzca el sabor"
-            id="sabor"
-            >
-            
-        </div>
-        <div>
-            <label class="text" for="categoria">Categoria:</label>
-            <input 
-            type="text"
-            formControlName = "categoria"
-            placeholder="Introduzca la categoria"
-            id="categoria"
-            >
-            
-        </div>
-        <div>
-            <label class="text" for="precio">Precio(50gr):</label>
-            <input 
-            type="number"
-            formControlName = "precio"
-            placeholder="Introduzca el precio"
-            id="precio"
-            >
-            
-        </div>
-        <div>
-            <label class="text" for="marca">Marca:</label>
-            <input 
-            type="text"
-            formControlName = "marca"
-            placeholder="Introduzca la marca"
-            id="marca"
-            >
-            
-        </div>
-        <div>
-            <label class="text" for="descripcion">Descripcion:</label>
-            <input 
-            type="text"
-            formControlName = "descripcion"
-            placeholder="Introduzca la descripcion"
-            id="descripcion"
-            >
-            
+                <div *ngIf="progressValue | async as val">
+                    <progress type="warning"  [value]="val" style="height: 7mm; width: 50%" max="100" ></progress>
+                    <span *ngIf="val<100" style="color:rgb(255, 60, 0); font-size: 17px; font-weight: 410;">{{ val | number}}% </span><span *ngIf="val == 100" style="color:rgb(1, 153, 34);  font-size: 17px; font-weight: 410;">Completed !</span>
+                </div>
+            </div>
+    
+            <div id="datos">
+                <div class="info">
+                    <label class = "text" for="nombre">Nombre:</label>
+                    <input 
+                    type="text"
+                    formControlName = "nombre"
+                    placeholder="Introduzca el nombre"
+                    id="nombre"
+                    required>
+                    
+                </div>
+                <div class="info">
+                    <label class= "text" for="sabor">Sabor:</label>
+                    <input 
+                    type="text"
+                    formControlName = "sabor"
+                    placeholder="Introduzca el sabor"
+                    id="sabor"
+                    >
+                    
+                </div>
+                <div class="info">
+                    <label class="text" for="categoria">Categoria:</label>
+                    <input 
+                    type="text"
+                    formControlName = "categoria"
+                    placeholder="Introduzca la categoria"
+                    id="categoria"
+                    >
+                    
+                </div>
+                <div class="info">
+                    <label class="text" for="precio">Precio(50gr):</label>
+                    <input 
+                    type="number"
+                    formControlName = "precio"
+                    placeholder="Introduzca el precio"
+                    id="precio"
+                    >
+                    
+                </div>
+                <div class="info">
+                    <label class="text" for="marca">Marca:</label>
+                    <input 
+                    type="text"
+                    formControlName = "marca"
+                    placeholder="Introduzca la marca"
+                    id="marca"
+                    >
+                </div>
+            </div>
+        </div>        
+        <div id="description">
+                <label id="desc" for="descripcion">Descripcion:</label>
+                <input 
+                type="text"
+                formControlName = "descripcion"
+                placeholder="Introduzca la descripcion"
+                id="descripcion"
+                >
         </div>
         <app-button id = "botonGuardar"(click) = "onSubmit($event)" [label] = "label"></app-button>
-        
     </form>
 </div>

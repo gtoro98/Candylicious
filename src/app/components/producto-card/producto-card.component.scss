@@ -1,3 +1,87 @@
+/* Reiniciar valores! */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#body{
+    width: 100%;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #borde{
+        width: 50%;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        #resto{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 280px;
+                height: 180px;
+                border-radius: 50px;
+                border: 2px solid;
+                border-color: rgba(217, 62, 70, 0.69);
+            }
+            #detalles{
+                display: flex;
+                justify-content: space-around;
+                #titulos{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-end;
+                    .info{
+                        text-align: right;
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 2em;
+                        line-height: 1em;
+                        color: rgba(218, 25, 25, 0.92);
+                    } 
+                }
+                #datos{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    .info{
+                        text-align: right;
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 1.8em;
+                        line-height: 1em;
+                        color: rgba(217, 62, 70, 0.69);
+                    }
+                }
+            }
+        }
+        #desc{
+            width: 100%;
+            height: 30%;
+            text-align: right;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 2em;
+            line-height: 1em;
+            color: rgba(217, 62, 70, 0.69);
+        }
+    }
+}
+
 .botonEliminar{
     position: absolute;
     top: 1em;
