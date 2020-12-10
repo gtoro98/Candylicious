@@ -27,8 +27,7 @@ import { ProductoDetallesComponent } from './pages/producto-detalles/producto-de
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
-import { PerfilComponent } from './pages/perfil/perfil.component';
+import { RecuContraComponent } from './pages/recu-contra/recu-contra.component'
 
 @NgModule({
   declarations: [
@@ -47,7 +46,6 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     UserDetailsComponent,
     SignupComponent,
     RecuContraComponent,
-    PerfilComponent
   ],
   imports: [
     BrowserModule,
