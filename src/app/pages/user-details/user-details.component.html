@@ -1,2 +1,45 @@
-<p>user-details works!</p>
-<button (click) = 'logOut()'>LogOut</button>
+<div id="perfil">
+    <div id="titulo">
+        <h1><strong>Información personal</strong></h1>
+    </div>
+    <form id="form">
+        <div>
+            <input 
+            form="text"
+            type="text"
+            formControlName = "nombre"
+            placeholder="Nombre"
+            id="nombre"
+            >
+        </div>   
+        <div>
+            <input 
+            form="email"
+            type="text"
+            formControlName = "email"
+            placeholder="Correo electrónico"
+            id="email"
+            >
+        </div>          
+        <div>
+            <input
+            type="text"
+            formControlName = "telefono"
+            placeholder="Telefono"
+            id="telefono"
+            >
+        </div>
+        <div>
+            <input
+            type="text"
+            formControlName = "direccion"
+            placeholder="Dirección"
+            id="direccion"
+            >
+        </div>
+    </form>
+    <div id="boton_modi">
+        <a id="modificar"><p><strong>Guardar cambios</strong></p></a>
+    </div>
+    <button id="boton_salir" (click) = 'logOut()'><p><strong>Log out</strong></p></button>
+</div>

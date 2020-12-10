@@ -168,6 +168,40 @@ div{
 }
 
 @media screen and (max-width: 600px) {
+    #central{
+        #formulario{
+            
+            #datos{
+                form{
+                    #nombre{
+                        font-size: 2.5vw;
+                        top: 0vh;
+                    }
+                    #correo{
+                        font-size: 2.5vw;
+                        top: 8vh;
+                    }
+    
+                    #mensaje{
+                        font-size: 2.5vw;
+                        top: 18vh;
+                    }
+    
+                    button{
+                        width: 15vw;
+                        height: 8vh;
+                        top: 40vh;
+                        p{
+                            font-size: 2.5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
     #principal{
         #contactanos{
             top: 30%;
@@ -179,6 +213,74 @@ div{
         height: 140vh;
         #formulario{
             width: 100%;
+            #titulo{
+                width: 80vw;
+            }
+            #datos{
+                position: absolute;
+                top: 118vh;
+                left: 16vw;
+                form{
+                    #nombre{
+                        position: absolute;
+                        top: 0vh;
+                        font-size: 3vw;
+                        width: 65vw;
+                        height: 4vh;
+                        border-color: rgba(255, 127, 159, 0.658);
+                        outline: 0 none;
+                        border-top-color: rgba(255, 255, 255, 0);
+                        border-left-color: rgba(255, 255, 255, 0);
+                        border-right-color: rgba(255, 255, 255, 0);
+                    }
+                    #correo{
+                        position: absolute;
+                        top: 9vh;
+                        font-size: 3vw;
+                        width: 65vw;
+                        height: 4vh;
+                        border-color: rgba(255, 127, 159, 0.658);
+                        outline: 0 none;
+                        border-top-color: rgba(255, 255, 255, 0);
+                        border-left-color: rgba(255, 255, 255, 0);
+                        border-right-color: rgba(255, 255, 255, 0);
+                    }
+    
+                    #mensaje{
+                        position: absolute;
+                        top: 19vh;
+                        font-size: 3vw;
+                        width: 65vw;
+                        height: 20vh;
+                        border-color: rgba(255, 127, 159, 0.658);
+                        outline: 0 none;
+                        border-top-color: rgba(255, 255, 255, 0);
+                        border-left-color: rgba(255, 255, 255, 0);
+                        border-right-color: rgba(255, 255, 255, 0);
+                    }
+    
+                    button{
+                        width: 16vw;
+                        height: 8vh;
+                        background: #D42C32;
+                        border: 0.1vw solid #FFFFFF;
+                        box-sizing: border-box;
+                        border-radius: 2vw;
+                        position: absolute;
+                        text-decoration: none;
+                        top: 44vh;
+                        left: 54vw;
+                        cursor: pointer;
+                        p{
+                            position: relative;
+                            top: 0vw;
+                            text-align: center;
+                            color: white;
+                            font-size: 3vw;
+                        }
+                    }
+                }
+            }
         }
         #mapa{
             width: 100%;
@@ -188,8 +290,22 @@ div{
         #networks{
             top: 250%;
             width: 35%;
+            .contenedor {
+                .network{
+                    width: 10vw;
+                    height: 10vh;
+                    position: absolute;
+                }
+                #r1{
+                    left: 2vw;
+                }
+                #r2{
+                    left: 15vw;
+                }
+                #r3{
+                    left: 30vw;
+                }
+            }
         }
-    }
-
-    
+    }   
 }

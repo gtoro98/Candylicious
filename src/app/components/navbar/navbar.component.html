@@ -17,6 +17,8 @@
     </a>
     
     <a  
+    [routerLink] ="['/carrito', user.displayName]" 
+    routerLinkActive = "link-active"
     class = "contenedor" 
     style="float: right;"
     *ngIf = 'isAuthenticated'

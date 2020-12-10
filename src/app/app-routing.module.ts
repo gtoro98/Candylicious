@@ -12,6 +12,8 @@ import { ProductoDetallesComponent } from './pages/producto-detalles/producto-de
 import { SignupComponent } from './pages/signup/signup.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 
 const routes: Routes = [
   {
@@ -64,6 +66,15 @@ const routes: Routes = [
     path: 'user-details/:userId',
     canActivate: [AuthGuard],
     component: UserDetailsComponent,
+  },
+  {
+    path: 'contrasena',
+    component: RecuContraComponent,
+  },
+  {
+    path: 'carrito/:userId',
+    canActivate: [AuthGuard],
+    component: CarritoComponent,
   },
   
 

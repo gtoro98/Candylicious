@@ -1,4 +1,110 @@
-button{
-    position: relative;
-    top: 5em
+*{
+    margin: 0% !important;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#titulo{
+    background-color: rgba(244, 210, 221, 1);
+    position: absolute;
+    top: 15vh;
+    width: 40vw;
+    height: 10vh;
+    h1{
+        position: absolute;
+        font-size: 3.5vw;
+        left: 2vw;
+        color: white;
+    }
+}
+
+#boton_salir{
+    width: 8vw;
+    height: 6vh;
+    background: #D42C32;
+    border: 0.1vw solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2vw;
+    position: absolute;
+    top: 17vh;
+    left: 85vw;
+    cursor: pointer;
+    p{
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 1.2vw;
+    }
+}
+
+#nombre{
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+    border-top: rgba(255, 255, 255, 0);
+    border-left: rgba(255, 255, 255, 0);
+    border-right: rgba(255, 255, 255, 0);
+    border-color: #da868abb;
+    width: 30vw;
+    height: 5vh;
+    font-size: 4vh;
+}
+
+#email{
+    position: absolute;
+    top: 35vh;
+    left: 50vw;
+    border-top: rgba(255, 255, 255, 0);
+    border-left: rgba(255, 255, 255, 0);
+    border-right: rgba(255, 255, 255, 0);
+    border-color: #da868abb;
+    width: 30vw;
+    height: 5vh;
+    font-size: 4vh;
+}
+
+#direccion{
+    position: absolute;
+    top: 55vh;
+    left: 50vw;
+    border-top: rgba(255, 255, 255, 0);
+    border-left: rgba(255, 255, 255, 0);
+    border-right: rgba(255, 255, 255, 0);
+    border-color: #da868abb;
+    width: 30vw;
+    height: 5vh;
+    font-size: 4vh;
+}
+
+#telefono{
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+    border-top: rgba(255, 255, 255, 0);
+    border-left: rgba(255, 255, 255, 0);
+    border-right: rgba(255, 255, 255, 0);
+    border-color: #da868abb;
+    width: 30vw;
+    height: 5vh;
+    font-size: 4vh;
+}
+
+#modificar{
+    width: 25vw;
+    height: 10vh;
+    background: #D42C32;
+    border: 0.1vw solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2vw;
+    position: absolute;
+    top: 74vh;
+    left: 36vw;
+    cursor: pointer;
+    p{
+        top: 2vh;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 2vw;
+    }
 }
