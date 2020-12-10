@@ -1,11 +1,12 @@
 <div id="metodo_envio">
     <div id="titulo">
-        <h1><strong>Método de envío</strong></h1>
+        <h1><strong>Método de pago</strong></h1>
     </div>
     <form>
-        <select name="Método de envío" id="metodo">
-            <option>Pick up</option>
-            <option>Delivery</option>
+        <select name="Método de pago" id="metodo">
+            <option>Transferencia</option>
+            <option>En Tienda</option>
+            <option>Paypal</option>
         </select>
 
         <input 
@@ -31,7 +32,19 @@
 
         <a [routerLink] ="['/comprar2']" id="boton_siguiente"><p><strong>Siguiente</strong></p></a>
     </form>
-    <p id="p_direccion">
-        <strong>Dirección: Caracas.   </strong> 
+    <p id="p_info">
+        Después de realizada su compra, nos comunicaremos con
+    </p>
+    <p id="p_info2">
+        usted para proporcionarle los datos de la transferencia.
+    </p>
+    <p id="p_info3">
+        Dirección: Caracas.
+    </p>
+    <p id="p_info4">
+        ¡No te preocupes si te sale el costo del envio!  Si pagas en nuestra tienda
+    </p>
+    <p id="p_info5">
+        no se cobrara.
     </p>
 </div>

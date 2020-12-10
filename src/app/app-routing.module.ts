@@ -15,6 +15,7 @@ import { UserDetailsComponent } from './pages/user-details/user-details.componen
 import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ComprarComponent } from './pages/comprar/comprar.component';
+import { Comprar2Component } from './pages/comprar2/comprar2.component';
 
 const routes: Routes = [
   {
@@ -81,7 +82,10 @@ const routes: Routes = [
     path: 'comprar',
     component: ComprarComponent,
   },
-  
+  {
+    path: 'comprar2',
+    component: Comprar2Component,
+  },
 
 ];
 

@@ -5,7 +5,7 @@
 }
 
 #titulo{
-    background-color: rgba(239, 174, 180, 1);
+    background-color: rgba(219, 80, 85, 1);
     position: absolute;
     top: 15vh;
     width: 100vw;
@@ -26,7 +26,7 @@
     width: 30vw;
     height: 7vh;
     font-size: 5vh;
-    color: #da868abb;
+    color: rgba(219, 80, 85, 1);
     border-top: rgba(255, 255, 255, 0);
     border-left: rgba(255, 255, 255, 0);
     border-right: rgba(255, 255, 255, 0);
@@ -96,11 +96,60 @@
     }
 }
 
-#p_direccion{
+#p_info{
+    color: #000000e8;
+    font-style: italic;
     position: absolute;
     top: 55vh;
-    left: 38vw;
-    width: 30vw;
+    left: 30vw;
+    width: 50vw;
+    height: 5vh;
+    font-size: 4vh;
+}
+
+#p_info2{
+    color: #000000e8;
+    font-style: italic;
+    position: absolute;
+    top: 61vh;
+    left: 30vw;
+    width: 50vw;
+    height: 5vh;
+    font-size: 4vh;
+}
+
+#p_info4{
+    visibility: hidden;
+    color: #000000e8;
+    font-style: italic;
+    position: absolute;
+    top: 55vh;
+    left: 20vw;
+    width: 60vw;
+    height: 5vh;
+    font-size: 4vh;
+}
+
+#p_info5{
+    visibility: hidden;
+    color: #000000e8;
+    font-style: italic;
+    position: absolute;
+    top: 61vh;
+    left: 20vw;
+    width: 50vw;
+    height: 5vh;
+    font-size: 4vh;
+}
+
+#p_info3{
+    visibility: hidden;
+    color: #000000e8;
+    font-style: italic;
+    position: absolute;
+    top: 74vh;
+    left: 20vw;
+    width: 50vw;
     height: 5vh;
     font-size: 4vh;
 }

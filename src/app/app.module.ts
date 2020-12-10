@@ -29,7 +29,8 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
-import { ComprarComponent } from './pages/comprar/comprar.component'
+import { ComprarComponent } from './pages/comprar/comprar.component';
+import { Comprar2Component } from './pages/comprar2/comprar2.component'
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ComprarComponent } from './pages/comprar/comprar.component'
     RecuContraComponent,
     CarritoComponent,
     ComprarComponent,
+    Comprar2Component,
   ],
   imports: [
     BrowserModule,
