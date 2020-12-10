@@ -28,6 +28,7 @@ import { UserDetailsComponent } from './pages/user-details/user-details.componen
 import { SignupComponent } from './pages/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
     ProductoDetallesComponent,
     UserDetailsComponent,
     SignupComponent,
-    RecuContraComponent
+    RecuContraComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
