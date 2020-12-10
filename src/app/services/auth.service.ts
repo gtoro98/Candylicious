@@ -4,6 +4,8 @@ import { from, Observable } from 'rxjs';
 import { auth, User } from 'firebase'
 import { UserDetails } from '../models/user-details';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { CarritoService } from './carrito.service';
+import { Carrito } from '../models/carrito';
 
 
 @Injectable({
@@ -14,7 +16,10 @@ export class AuthService {
 
   private userCollection: AngularFirestoreCollection<UserDetails>;
 
-  constructor(private afAuth: AngularFireAuth, private db: AngularFirestore) {
+  constructor(
+    private afAuth: AngularFireAuth, 
+    private db: AngularFirestore,
+    private carritoService: CarritoService) {
 
     this.userCollection = this.db.collection<UserDetails>('user');
    }
@@ -62,6 +67,12 @@ export class AuthService {
   }
 
   createUser(newUser: UserDetails): Promise<any>{
+    const carrito: Carrito = {
+      userId: newUser.userId,
+      bolsas: [],
+      montoTotal: 0,
+    }
+    this.carritoService.createCarrito(carrito)
     return this.userCollection.add(newUser);
   }
 

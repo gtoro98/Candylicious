@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'firebase';
+import { Bolsa } from 'src/app/models/bolsa';
+import { Carrito } from 'src/app/models/carrito';
 import { Mensaje } from 'src/app/models/mensaje';
 import { Producto } from 'src/app/models/producto';
 import { UserDetails } from 'src/app/models/user-details';
 import { AuthService } from 'src/app/services/auth.service';
+import { CarritoService } from 'src/app/services/carrito.service';
 import { MensajeService } from 'src/app/services/mensaje.service';
 import { ProductoService } from 'src/app/services/producto.service';
 
@@ -17,10 +20,13 @@ export class TiendaComponent implements OnInit {
 
   productos: Array<Producto> = [];
   mensajes: Array<Mensaje> = [];
+  producto: Producto = null;
+  productoId: string = null;
   label = "Agregar";
 
   isAuthenticated = false;
   user: UserDetails = null;
+  carrito: Carrito = null;
 
   navBarOpen = false;
 
@@ -29,6 +35,7 @@ export class TiendaComponent implements OnInit {
     private mensajeService: MensajeService,
     private router: Router,
     private authService: AuthService,
+    private carritoService: CarritoService,
     ) { }
 
   ngOnInit(): void {
@@ -56,7 +63,7 @@ getAllMensajes(): void {
         $key: item.payload.doc.id,
       }as Mensaje)
     );
-    console.log(this.mensajes)
+ 
   });
 }
 
@@ -64,15 +71,65 @@ getAllMensajes(): void {
     this.router.navigateByUrl('/create-product');
 }
 getCurrentUser(): void{
-  this.authService.getCurrentUser().subscribe(response => {
+  this.authService.getCurrentUser().subscribe(async (response) => {
     if(response){
       this.isAuthenticated = true;
       this.user = JSON.parse(localStorage.getItem('user'));
-      return;
+      await this.carritoService.getCarrito(this.user.userId).get().then(response => {
+        localStorage.setItem('carrito', JSON.stringify(response.docs[0].data()))
+        this.carrito = JSON.parse(localStorage.getItem('carrito'))
+        console.log(this.carrito.bolsas)
+      });
     }
-    this.isAuthenticated = false;
-    this.user = null;
-  });
+    else{
+      this.isAuthenticated = false;
+      this.user = null;
+    }
+    }
+    )
+   
+    
+  ;
+}
+
+async escogerBolsa(){
+  console.log(document.getElementById("select_bolsa").textContent)
+  if(document.getElementById("select_bolsa").textContent == "Nueva Bolsa"){
+
+    const nuevaBolsa: Bolsa = {
+      clienteId: this.user.userId,
+      productos: {
+        producto: this.producto,
+        cantidad: 1
+      }
+    }
+    this.carritoService.agregarBolsa(nuevaBolsa, this.carrito)
+    await this.carritoService.getCarrito(this.user.userId).get().then(response => {
+      localStorage.setItem('carrito', JSON.stringify(response.docs[0].data()))
+      this.carrito = JSON.parse(localStorage.getItem('carrito'))
+      console.log(this.carrito.bolsas)
+    });
+  }
+  
+  
+}
+
+getProductoById(): void {
+  this.productoService.getProducto(this.productoId).subscribe((item) => {
+    this.producto = {
+      $key: item.payload.id,
+      ...item.payload.data(),
+    }
+
+
+  })
+}
+
+agregarProducto(productoId: string){
+  this.productoId = productoId
+  this.getProductoById()
+  console.log(productoId)
+  document.getElementById("popUp").style.display = "initial"
 }
 
 openNav() {
