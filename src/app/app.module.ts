@@ -30,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecuContraComponent } from './pages/recu-contra/recu-contra.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ComprarComponent } from './pages/comprar/comprar.component';
-import { Comprar2Component } from './pages/comprar2/comprar2.component'
+import { Comprar2Component } from './pages/comprar2/comprar2.component';
+import { Comprar3Component } from './pages/comprar3/comprar3.component'
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { Comprar2Component } from './pages/comprar2/comprar2.component'
     CarritoComponent,
     ComprarComponent,
     Comprar2Component,
+    Comprar3Component,
   ],
   imports: [
     BrowserModule,
