@@ -11,11 +11,12 @@
     <app-button class = "botonGuardar"  (click)="functioncall($event)" [label] = "label"></app-button>
 -->
 <div id="mySidebar" class="sidebar">
+    <h1>Mensajes:</h1>
     <div *ngFor = "let mensaje of mensajes">
         <ul>
             <li>
-                <p>{{mensaje.nombre}}:</p>
-                <p> {{mensaje.mensaje}}</p>
+                <span>{{mensaje.nombre}}:</span>
+                <span> {{mensaje.mensaje}}</span>
             </li>
         </ul>
     
@@ -27,7 +28,7 @@
     <button class="openbtn" (click)="openNav()">
         <img class = "imagen"  src="assets/img/icono-rosa.png" >
     </button>
-  </div>
+</div>
 <div>
     <div id="central">
         <div class="flechas">
@@ -74,7 +75,7 @@
         <div class="custom-select">
             <select id = "select_bolsa">
               <option value="0">Nueva Bolsa</option>
-              <option *ngFor = "let bolsa of carrito.bolsas">bolsa</option>
+             
               
             </select>
         </div>
