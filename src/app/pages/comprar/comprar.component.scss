@@ -3,3 +3,102 @@
     padding: 0%;
     box-sizing: border-box;
 }
+
+#titulo{
+    background-color: rgba(239, 174, 180, 1);
+    position: absolute;
+    top: 15vh;
+    width: 100vw;
+    height: 13vh;
+    h1{
+        position: absolute;
+        top: 1vh;
+        font-size: 3.5vw;
+        left: 35vw;
+        color: white;
+    }
+}
+
+#metodo{
+    position: absolute;
+    top: 37vh;
+    left: 35vw;
+    width: 30vw;
+    height: 7vh;
+    font-size: 5vh;
+    color: #da868abb;
+    border-top: rgba(255, 255, 255, 0);
+    border-left: rgba(255, 255, 255, 0);
+    border-right: rgba(255, 255, 255, 0);
+    border-bottom: rgba(255, 255, 255, 0);
+}
+
+#direccion{
+    visibility: hidden;
+    position: absolute;
+    top: 50vh;
+    left: 35vw;
+    border-top: rgba(255, 255, 255, 0);
+    border-left: rgba(255, 255, 255, 0);
+    border-right: rgba(255, 255, 255, 0);
+    border-color: #da868abb;
+    width: 30vw;
+    height: 5vh;
+    font-size: 4vh;
+}
+
+#codigo{
+    visibility: hidden;
+    position: absolute;
+    top: 65vh;
+    left: 35vw;
+    border-top: rgba(255, 255, 255, 0);
+    border-left: rgba(255, 255, 255, 0);
+    border-right: rgba(255, 255, 255, 0);
+    border-color: #da868abb;
+    width: 30vw;
+    height: 5vh;
+    font-size: 4vh;
+}
+
+#telefono{
+    visibility: hidden;
+    position: absolute;
+    top: 80vh;
+    left: 35vw;
+    border-top: rgba(255, 255, 255, 0);
+    border-left: rgba(255, 255, 255, 0);
+    border-right: rgba(255, 255, 255, 0);
+    border-color: #da868abb;
+    width: 30vw;
+    height: 5vh;
+    font-size: 4vh;
+}
+
+#boton_siguiente{
+    width: 12vw;
+    height: 10vh;
+    background: #D42C32;
+    border: 0.1vw solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2vw;
+    position: absolute;
+    top: 85vh;
+    left: 80vw;
+    cursor: pointer;
+    p{
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 1.5vw;
+    }
+}
+
+#p_direccion{
+    position: absolute;
+    top: 55vh;
+    left: 38vw;
+    width: 30vw;
+    height: 5vh;
+    font-size: 4vh;
+}
