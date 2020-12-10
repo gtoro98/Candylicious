@@ -1,8 +1,11 @@
 button{
-   
     background: rgba(218, 25, 25, 0.92);
-    width: 14em;
-    height: 5em;
+    width: 14vw;
+    height: 10vh;
+    border: 1px solid;
+    border-color: white;
+    color: white;
+    font-size: 4vh;
+    border-radius: 50px;
     text-align: center;
-    border-radius: 1em;
 }

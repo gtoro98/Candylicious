@@ -1,22 +1,74 @@
-<ul>
-    <button class = "botonEliminar"
-     (click) = "deleteProducto(producto.$key)"
-     *ngIf = 'isAuthenticated'
-     >X</button>
-    <li>{{ producto.$key }}</li>
-    <li>
-        <img src= "{{producto.imagen}}" onerror="this.onerror=null;this.src='assets/img/noImage.png';">
-    </li>
-    <li>
-        <a [routerLink] = "['/producto', producto.$key, 'detalles']">
-            {{ producto.nombre }}
-        </a>
-    </li>
-    <li>{{ producto.categoria }}</li>
-    <li>{{ producto.sabor }}</li>
-    <li>{{ producto.precio }}</li>
-    <a class = "botonEditar" 
-    [routerLink] = "['/producto', producto.$key, 'editar']"
-    *ngIf = 'isAuthenticated'
-    > Editar Producto</a>
-</ul>
+
+<div id = "body" style="background-color: aqua;">
+    <form id="borde">
+        <div id = "resto">
+            <div id="imagen">
+                <img id="foto" src= "{{producto.imagen}}" onerror="this.onerror=null;this.src='assets/img/noImage.png';"  width="385px" height="240px"/>
+    
+            <div id="datos">
+                <div class="info">
+                    <label class = "text">Nombre:</label>
+                    <div class="dato">{{ producto.nombre }}</div>
+                </div>
+                <div class="info">
+                    <label class= "text">Sabor:</label>
+                    <div class="dato">{{ producto.sabor }}</div>
+                </div>
+                <div class="info">
+                    <label class="text">Categoria:</label>
+                    <div class="dato">{{ producto.categoria }}</div>
+                </div>
+                <div class="info">
+                    <label class="text">Precio(50gr):</label>
+                    <div class="dato">{{ producto.precio }}</div>
+                </div>
+                <div class="info">
+                    <label class="text">Marca:</label>
+                    <div class="dato">{{ producto.marca }}</div>
+                </div>
+            </div>
+        </div>        
+        <div id="description">
+                <label id="desc">Descripcion:</label>
+                <div class="dato">{{ producto.descripcion }}</div>
+        </div>
+        <app-button id = "botonGuardar"(click) = "onSubmit($event)" [label] = "label"></app-button>
+    </form>
+</div>
+
+<!--
+<div id="body">
+    <div id="borde">
+        <div id="resto">
+            <button class = "botonEliminar"
+            (click) = "deleteProducto(producto.$key)"
+            *ngIf = 'isAuthenticated'
+            >X</button>
+            <img src= "{{producto.imagen}}" onerror="this.onerror=null;this.src='assets/img/noImage.png';">  
+            <div id="detalles">
+                <div id="titulos">
+                    <div class="info">Nombre:</div>
+                    <div class="info">Sabor:</div>
+                    <div class="info">Categoría:</div>
+                    <div class="info">Precio:</div>
+                    <div class="info">Marca:</div>
+                </div>
+                <div id="datos">
+                    <div class="info">{{ producto.nombre }}</div>
+                    <div class="info">{{ producto.sabor }}</div>
+                    <div class="info">{{ producto.categoria }}</div>
+                    <div class="info">{{ producto.precio }}</div>
+                    <div class="info">{{ producto.marca }}</div>
+                </div>
+            </div>
+        </div>
+        <div id="desc">
+            <div class="info">{{ producto.descripcion }}</div>
+        </div>
+        <a class = "botonEditar" 
+        [routerLink] = "['/producto', producto.$key, 'editar']"
+        *ngIf = 'isAuthenticated'
+        > Editar Producto</a>
+    </div>
+</div>
+-->

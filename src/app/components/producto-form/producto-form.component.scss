@@ -1,6 +1,109 @@
-.container{
-    margin: auto;
-    width: 50%;
+/* Reiniciar valores! */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#body{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #formulario{
+        width: 60%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        #resto{
+            height: 65%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            #imagen{
+                width: 45%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                #foto{
+                    border-radius: 50px;
+                    border: 2px solid;
+                    border-color: rgba(217, 62, 70, 0.69);
+                }
+            }
+            #datos{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                .info{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-align: center;
+                    .text{
+                        width: 50%;
+                        display: flex;
+                        justify-content: flex-end;
+                        text-align: right;
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 2em;
+                        line-height: 1em;
+                        color: rgba(217, 62, 70, 0.69);
+                    }
+                    input{
+                        border: 3px solid #EFB0B6;
+                        box-sizing: border-box;
+                        padding: 1em 1em;
+                        border-radius: 10px;
+                        width: 171px;
+                        height: 48px;
+                    }
+                }
+            }
+        }
+        #description{
+            height: 25%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            #desc{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                text-align: right;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 2em;
+                line-height: 1em;
+                color: rgba(217, 62, 70, 0.69);
+            }
+            input{
+                display: flex;
+                justify-content: flex-start;
+                border: 3px solid #EFB0B6;
+                box-sizing: border-box;
+                padding: 1em 1em;
+                border-radius: 10px;
+                width: 95%;
+                height: 68%;
+            }
+        }
+    }
 }
 .form{
     
@@ -8,38 +111,8 @@
     position: relative;
 }
 
-input{
 
-    border: 3px solid #EFB0B6;
-    box-sizing: border-box;
-    padding: 1em 1em;
-    border-radius: 10px;
-    width: 171px;
-    height: 48px;
-}
 
-.text{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 2em;
-    line-height: 1em;
-
-color: rgba(217, 62, 70, 0.69);
-}
-
-.sub-title{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 3em;
-    line-height: 1em;
-
-color: rgba(217, 62, 70, 0.69);
-}
-#sub-title{
-    text-align: center;
-}
 #submit{
     position: absolute;
     right:    5px;
@@ -53,7 +126,7 @@ color: rgba(217, 62, 70, 0.69);
 
 #botonGuardar{
     position: absolute;
-    bottom: 1em;
-    right: 1em;
+    bottom: 2vh;
+    right: 3vw;
     
 }

@@ -24,6 +24,7 @@
 <div>
     <div id="central">
         <div class="flechas">
+            <div id="der"></div>
         </div>
         <div id="contenedor">
             <div id= "productoCard" *ngFor="let producto of productos">
@@ -38,8 +39,8 @@
                         <h2 id="categoria">{{ producto.categoria }}</h2>
                         <h2 id="sabor">{{ producto.sabor }}</h2>
                     </div>
-                    <a class = "botonEditar" [routerLink] = "['/producto', producto.$key, 'editar']" *ngIf = "isAuthenticated && !user.isAdmin"> Agregar al carrito</a>
-                    <a class = "botonEditar" [routerLink] = "['/producto', producto.$key, 'editar']" *ngIf = "isAuthenticated && user.isAdmin"> Editar Producto</a>
+                    <a class = "botones" [routerLink] = "['/producto', producto.$key, 'editar']" *ngIf = "isAuthenticated && !user.isAdmin"> Agregar al carrito</a>
+                    <a class = "botones" [routerLink] = "['/producto', producto.$key, 'editar']" *ngIf = "isAuthenticated && user.isAdmin"> Editar Producto</a>
                     <!--<ul>
                         <li>{{ producto.$key }}</li>
                         <li>{{ producto.nombre }}</li>
@@ -53,7 +54,7 @@
             </div>
         </div>
         <div class="flechas">
-            
+            <div id="izq"></div>
         </div>
         <app-button id="boton" (click)="functioncall($event)" [label] = "label" *ngIf = "isAuthenticated && user.isAdmin"></app-button>
     </div> 
