@@ -59,6 +59,10 @@ getCurrentUser(): void{
   });
 }
 
+deleteProducto(productoId: string): void{
+    this.productoService.deleteProducto(productoId).then((res) => {}).catch((err) => console.log(err))
+}
+
 openNav() {
 
   if(this.navBarOpen === false){
