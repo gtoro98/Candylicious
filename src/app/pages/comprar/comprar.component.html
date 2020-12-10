@@ -1,1 +1,34 @@
-<p>comprar works!</p>
+<div id="metodo_envio">
+    <div>
+        <h1><strong>Método de envío</strong></h1>
+    </div>
+    <form>
+        <select name="Método de envío" id="metodo">
+            <option>Pick up</option>
+            <option>Delivery</option>
+        </select>
+
+        <input 
+            type="text"
+            formControlName = "direccion"
+            placeholder="Dirección"
+            id="direccion"
+        >
+
+        <input 
+            type="text"
+            formControlName = "codigo"
+            placeholder="Código postal"
+            id="codigo"
+        >
+
+        <input 
+            type="text"
+            formControlName = "telefono"
+            placeholder="Telefono"
+            id="telefono"
+        >
+
+        <button id="boton_siguiente"><p><strong>Siguiente</strong></p></button>
+    </form>
+</div>
